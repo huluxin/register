@@ -21,7 +21,7 @@ public class RegisterEmailServiceTest {
     @Before
     public void startMailServer() throws Exception{
         greenMail = new GreenMail( ServerSetup.SMTP );
-        greenMail.setUser("wangyj0898@126.com","jing62661206wy");
+        greenMail.setUser("wangyj0898@126.com","ab123456");
         greenMail.start();
     }
 
