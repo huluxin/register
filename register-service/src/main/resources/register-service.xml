@@ -5,7 +5,7 @@
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:Register-service.properties"></property>
+        <property name="location" value="classpath:register-service.properties"></property>
     </bean>
 
     <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
