@@ -21,7 +21,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
             </props>
         </property>
     </bean>
-    <bean id="accountEmailService" class="com.IsoftStone.register.email.RegisterEmailServiceImpl">
+    <bean id="registerEmailService" class="com.IsoftStone.register.email.RegisterEmailServiceImpl">
         <property name="javaMailSender" ref="javaMailSender" />
         <property name="systemEmail" value="${email.systemEmail}"/>
     </bean>
