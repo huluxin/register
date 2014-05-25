@@ -32,6 +32,7 @@ public class AccountPersistServiceImpl implements AccountPersistService {
 
     /**
      * 创建保存密码的 xml 配置信息
+     *
      * @param account
      * @return
      * @throws AccountPersistException
@@ -52,10 +53,10 @@ public class AccountPersistServiceImpl implements AccountPersistService {
         Element element = DocumentFactory.getInstance().createElement(ELEMENT_ACCOUNT);
 
         element.addElement(ELEMENT_ACCOUNT_ID).setText(account.getId());
-        element.addElement( ELEMENT_ACCOUNT_NAME ).setText( account.getName() );
-        element.addElement( ELEMENT_ACCOUNT_EMAIL ).setText( account.getEmail() );
-        element.addElement( ELEMENT_ACCOUNT_PASSWORD ).setText( account.getPassword() );
-        element.addElement( ELEMENT_ACCOUNT_ACTIVATED ).setText( account.isActivated() ? "true" : "false" );
+        element.addElement(ELEMENT_ACCOUNT_NAME).setText(account.getName());
+        element.addElement(ELEMENT_ACCOUNT_EMAIL).setText(account.getEmail());
+        element.addElement(ELEMENT_ACCOUNT_PASSWORD).setText(account.getPassword());
+        element.addElement(ELEMENT_ACCOUNT_ACTIVATED).setText(account.isActivated() ? "true" : "false");
         return element;
     }
 
@@ -80,19 +81,37 @@ public class AccountPersistServiceImpl implements AccountPersistService {
         account.setName(element.elementText(ELEMENT_ACCOUNT_NAME));
         account.setEmail(element.elementText(ELEMENT_ACCOUNT_EMAIL));
         account.setPassword(element.elementText(ELEMENT_ACCOUNT_PASSWORD));
-        account.setActivated(("".equals(element.elementText(ELEMENT_ACCOUNT_ACTIVATED)) ? true : false));
+        account.setActivated(("true".equals(element.elementText(ELEMENT_ACCOUNT_ACTIVATED)) ? true : false));
 
         return account;
     }
 
     @Override
     public Account updateAccount(Account account) throws AccountPersistException {
+
+        if (readAccount(account.getId()) != null) {
+            deleteAccount(account.getId());
+
+            return createAccount(account);
+        }
+
         return null;
     }
 
     @Override
     public void deleteAccount(String id) throws AccountPersistException {
 
+        Document doc = readDocument();
+        Element accountsEle = doc.getRootElement().element(ELEMENT_ACCOUNTS);
+        for ( Element accountEle : (List<Element>) accountsEle.elements() ) {
+
+            if(accountEle.elementText(ELEMENT_ACCOUNT_ID).equals(id)){
+            //    accountEle.clearContent();
+                accountEle.detach();
+                writeDocument(doc);
+                return;
+            }
+        }
     }
 
     private Document readDocument() throws AccountPersistException {
