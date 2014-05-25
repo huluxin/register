@@ -1,6 +1,7 @@
 package com.IsoftStone.register.email;
 
 import com.icegreen.greenmail.util.GreenMail;
+import com.icegreen.greenmail.util.GreenMailUtil;
 import com.icegreen.greenmail.util.ServerSetup;
 import org.junit.After;
 import org.junit.Before;
@@ -21,14 +22,14 @@ public class RegisterEmailServiceTest {
     @Before
     public void startMailServer() throws Exception{
         greenMail = new GreenMail( ServerSetup.SMTP );
-        greenMail.setUser("wangyj0898@126.com","ab123456");
+        greenMail.setUser("test@yeah.com","123456");
         greenMail.start();
     }
 
     @Test
     public void testSendMail() throws Exception{
         ApplicationContext ctx = new ClassPathXmlApplicationContext( "register-email.xml" );
-        RegisterEmailService accountEmailService = (RegisterEmailService) ctx.getBean( "accountEmailService" );
+        RegisterEmailService accountEmailService = (RegisterEmailService) ctx.getBean( "registerEmailService" );
 
         String subject = "Test Subject";
         String htmlText = "<h3>Test</h3>";
@@ -37,7 +38,10 @@ public class RegisterEmailServiceTest {
         greenMail.waitForIncomingEmail(2000,1);
 
         Message[] msgs = greenMail.getReceivedMessages();
+        assertEquals(1, msgs.length);
+        assertEquals("admin@yeah.com",msgs[0].getFrom()[0].toString());
         assertEquals( subject, msgs[0].getSubject() );
+        assertEquals( htmlText, GreenMailUtil.getBody(msgs[0]).trim() );
     }
 
     @After
