@@ -4,5 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-
+    <bean id="registerCaptchaService"
+          class="com.IsoftStone.register.captcha.RegisterCaptchaServiceImpl">
+    </bean>
 </beans>
