@@ -1,4 +1,4 @@
-register
+register https://travis-ci.org/wangyj0898/register.svg?branch=master
 ========
 
 java,maven,spring
