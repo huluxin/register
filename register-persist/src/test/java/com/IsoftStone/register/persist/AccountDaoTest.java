@@ -35,7 +35,7 @@ public class AccountDaoTest {
 
     @Test
     public void testAccountDao()  throws Exception{
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         RegisterAccountInf accountInf = sqlSession.getMapper(RegisterAccountInf.class);
         Account account = new Account();
 
@@ -50,6 +50,6 @@ public class AccountDaoTest {
         sqlSession.commit();
 
         System.out.println("新增学生的ID： " + account.getPid());
-        sqlSession.close();
+        sqlSession.close();*/
     }
 }
