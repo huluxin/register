@@ -48,6 +48,6 @@ public class RegisterEmailServiceTest {
     public void stopMailServer()
             throws Exception
     {
-        greenMail.stop();
+      //  greenMail.stop();
     }
 }
