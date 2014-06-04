@@ -8,28 +8,12 @@
   </settings>
  
   <typeAliases>
-  	<typeAlias alias="Account" type="com.IsoftStone.register.dao.Account"/>
+  	<typeAlias alias="AccountDTO" type="com.IsoftStone.register.dao.dto.AccountDTO"/>
   </typeAliases>
-  
-  <environments default="development">
-     <!-- id必须唯一 -->
-  	 <environment id="development">
-  	    <!-- 事务管理器，这里直接使用jdbc的事务管理能力 -->
-  	 	<transactionManager type="jdbc"/>
-  	 	  <!-- 数据源配置 -->
-		  <dataSource type="POOLED">
-  	 	    <property name="driver" value="com.mysql.jdbc.Driver"/>
-            <property name="url"
- 	           value="jdbc:mysql://localhost:3306/bbs?characterEncoding=UTF-8"/>
-  	 	    <property name="username" value="root"/>
-  	 	    <property name="password" value="admin"/>
-  	 	  </dataSource>
-  	 </environment> 
-  </environments>
  
-  <!-- 采用相对类路径 -->
+  <!-- 采用相对类路径
   <mappers>
-  	<mapper resource="mybatis/Account.xml"/>
+  	<mapper resource="mybatis/AccountMapper.xml"/>
   </mappers>
-  
+-->
 </configuration>

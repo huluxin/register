@@ -17,11 +17,13 @@
         <module>register-service</module>
     </modules>
     <properties>
-        <springframework.version>2.5.6</springframework.version>
+        <!--<springframework.version>2.5.6</springframework.version>-->
+        <springframework.version>3.0.5.RELEASE</springframework.version>
         <junit.version>4.7</junit.version>
         <!-- JDBC Drivers -->
         <mysql-connector-java.version>5.1.18</mysql-connector-java.version>
         <mybatis.version>3.1.1</mybatis.version>
+        <mybatis-spring.version>1.2.0</mybatis-spring.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -51,6 +53,11 @@
                 <version>${springframework.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
@@ -64,6 +71,11 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

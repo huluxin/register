@@ -29,6 +29,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
     <bean id="accountPersistService" class="com.IsoftStone.register.persist.AccountPersistServiceImpl">
         <property name="file" value="${persist.file}"/>
     </bean>
+    <!--<bean id="accountPersistService" class="com.IsoftStone.register.dao"></bean>-->
 
     <bean id="registerService" class="com.IsoftStone.register.service.RegisterServiceImpl">
         <property name="accountPersistService" ref="accountPersistService" />

@@ -1,10 +1,10 @@
-package com.IsoftStone.register.dao;
+package com.IsoftStone.register.dao.dto;
 
 /**
  * 账户的简单模型
  * Created by Bachelor Wang on 2014/5/24.
  */
-public class Account {
+public class AccountDTO {
 
     private int pid;
 
