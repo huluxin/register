@@ -51,7 +51,7 @@ public class AccountDaoTest {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("register-persist.xml");
         accountInf = (RegisterAccountInf) ctx.getBean("accountMapper");
         AccountDTO account = new AccountDTO();
-        account.setId("jing5");
+        account.setId("jing777");
         account.setName("第3靓仔");
         account.setEmail("rungen0898@yeah.com");
         account.setPassword("123456");

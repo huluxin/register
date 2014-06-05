@@ -72,4 +72,34 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
     <bean id="accountMapper" parent="parentMapper">
         <property name="mapperInterface" value="com.IsoftStone.register.dao.bo.RegisterAccountInf"/>
     </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--配置事务增强处理，指定事务处理策略，transaction-manager属性指定事务管理器。
+  若事务管理器bean的id即为transactionManager，则
+  transaction-manager的属性可以不指定-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--所有以find和get开头的方法都是只读的-->
+            <tx:method name="find*" read-only="true" />
+            <tx:method name="get*" read-only="true" />
+            <tx:method name="save*" />
+            <tx:method name="update*" />
+            <tx:method name="add*"/>
+            <!--其他方法使用默认事务策略-->
+            <tx:method name="*" />
+        </tx:attributes>
+    </tx:advice>
+    <!-- AOP配置-->
+    <aop:config>
+        <!--pointcut元素定义一个切入点， execution()是最常用的切点函数，
+	    其中的第一个星号用以匹配方法的返回类型，这里星号表明匹配所有返回类型。
+	com.abc.service.*.*(..)表明匹配com.abc.service包下的所有类的所有方法，
+	..代表方法参数可以是任意的，包括0个。切入点表达式常见写法可参见：
+	http://lavasoft.blog.51cto.com/62575/172292/ -->
+        <aop:pointcut id="myPointcut" expression="execution(public * com.IsoftStone.register.dao.bo.*.*(..))"/>
+        <!--将定义好的事务处理策略应用到上述的切入点-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="myPointcut"/>
+    </aop:config>
 </beans>
