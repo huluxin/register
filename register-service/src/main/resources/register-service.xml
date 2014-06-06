@@ -53,9 +53,9 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
         <property name="file" value="${persist.file}"/>
     </bean>
     <!--<bean id="registerAccountPersist" class="com.IsoftStone.register.dao.bo.RegisterAccountimpl"></bean>-->
-    <bean id="registerAccountService" class="com.IsoftStone.register.service.dao.bo.RegisterAccountServiceImpl">
+   <!-- <bean id="registerAccountService" class="com.IsoftStone.register.service.dao.bo.RegisterAccountServiceImpl">
         <property name="accountMapper" ref="accountMapper"/>
-    </bean>
+    </bean>-->
 
     <bean id="registerService" class="com.IsoftStone.register.service.RegisterServiceImpl">
         <property name="accountPersistService" ref="accountPersistService"/>
@@ -66,5 +66,4 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
     <bean id="accountMapper" parent="parentMapper">
         <property name="mapperInterface" value="com.IsoftStone.register.dao.bo.RegisterAccountInf"/>
     </bean>
-    <import resource="register-persist.xml"/>
 </beans>

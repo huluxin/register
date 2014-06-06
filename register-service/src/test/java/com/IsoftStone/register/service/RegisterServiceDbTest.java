@@ -1,6 +1,5 @@
 package com.IsoftStone.register.service;
 
-import com.IsoftStone.register.service.dao.bo.RegisterAccountService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
