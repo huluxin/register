@@ -10,4 +10,6 @@ public interface RegisterAccountService {
     public void addAccount(SignUpRequest signUpRequest) throws Exception;
 
     public void updateAccount(SignUpRequest signUpRequest) throws Exception;
+
+    public void deleteAccount(long id);
 }

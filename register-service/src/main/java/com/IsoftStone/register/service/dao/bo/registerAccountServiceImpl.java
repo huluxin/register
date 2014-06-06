@@ -46,4 +46,10 @@ public class RegisterAccountServiceImpl implements RegisterAccountService {
     public void updateAccount(SignUpRequest signUpRequest) throws Exception {
 
     }
+
+    @Override
+    public void deleteAccount(long id) {
+
+    }
+
 }
