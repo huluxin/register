@@ -41,4 +41,9 @@ public class RegisterAccountServiceImpl implements RegisterAccountService {
 
         accountMapper.add(account);
     }
+
+    @Override
+    public void updateAccount(SignUpRequest signUpRequest) throws Exception {
+
+    }
 }

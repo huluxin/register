@@ -7,5 +7,7 @@ import com.IsoftStone.register.service.SignUpRequest;
  */
 public interface RegisterAccountService {
 
-    void addAccount(SignUpRequest signUpRequest) throws Exception;
+    public void addAccount(SignUpRequest signUpRequest) throws Exception;
+
+    public void updateAccount(SignUpRequest signUpRequest) throws Exception;
 }
