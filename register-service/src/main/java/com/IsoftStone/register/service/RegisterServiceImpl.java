@@ -3,6 +3,7 @@ package com.IsoftStone.register.service;
 import com.IsoftStone.register.captcha.RandomGenerator;
 import com.IsoftStone.register.captcha.RegisterCaptchaException;
 import com.IsoftStone.register.captcha.RegisterCaptchaService;
+import com.IsoftStone.register.dao.bo.RegisterAccountInf;
 import com.IsoftStone.register.email.RegisterEmailException;
 import com.IsoftStone.register.email.RegisterEmailService;
 import com.IsoftStone.register.persist.Account;
@@ -142,5 +143,11 @@ public class RegisterServiceImpl implements RegisterService {
 
     public void setRegisterCaptchaService(RegisterCaptchaService registerCaptchaService) {
         this.registerCaptchaService = registerCaptchaService;
+    }
+
+
+    @Override
+    public void addAccount(SignUpRequest signUpRequest) throws RegisterServiceException {
+
     }
 }

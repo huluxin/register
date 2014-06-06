@@ -14,4 +14,6 @@ public interface RegisterService {
     void activate(String activationNumber) throws RegisterServiceException;
 
     void login(String id ,String password) throws RegisterServiceException;
+
+    void addAccount(SignUpRequest signUpRequest) throws RegisterServiceException;
 }
