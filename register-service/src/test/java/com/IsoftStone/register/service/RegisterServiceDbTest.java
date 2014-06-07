@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class RegisterServiceDbTest {
 
-    private RegisterAccountService registerAccountService;
+  //  private RegisterAccountService registerAccountService;
 
     @Test
     public void testRegisterDbService(){
@@ -23,7 +23,7 @@ public class RegisterServiceDbTest {
           //  ApplicationContext ctx = new ClassPathXmlApplicationContext( springConfigFiles );
 
             ApplicationContext ctx = new ClassPathXmlApplicationContext("register-service.xml");
-            registerAccountService = (RegisterAccountService) ctx.getBean("registerAccountService");
+        //    registerAccountService = (RegisterAccountService) ctx.getBean("registerAccountService");
             // 2. Submit sign up Request
             SignUpRequest signUpRequest = new SignUpRequest();
             //   signUpRequest.setCaptchaKey( captchaKey );
@@ -35,7 +35,7 @@ public class RegisterServiceDbTest {
             signUpRequest.setConfirmPassword( "Yeah_Root02" );
             signUpRequest.setActivateServiceUrl( "http://localhost:8080/register/activate" );
 
-            registerAccountService.addAccount(signUpRequest);
+        //    registerAccountService.addAccount(signUpRequest);
         } catch (Exception e) {
             e.printStackTrace();
         }

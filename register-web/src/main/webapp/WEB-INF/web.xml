@@ -13,6 +13,7 @@
             classpath:/register-captcha.xml
             classpath:/register-email.xml
             classpath:/register-service.xml
+            classpath:/applicationContext.xml
         </param-value>
     </context-param>
     <servlet>

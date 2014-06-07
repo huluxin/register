@@ -3,6 +3,7 @@ package com.IsoftStone.register.web;
 import com.IsoftStone.register.service.RegisterService;
 import com.IsoftStone.register.service.RegisterServiceException;
 import com.IsoftStone.register.service.SignUpRequest;
+import com.IsoftStone.register.service.dao.bo.RegisterAccountService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -47,6 +48,7 @@ public class SignUpServlet extends HttpServlet {
         }
 
         RegisterService service = (RegisterService) context.getBean("registerService");
+        RegisterAccountService registerAccountService = (RegisterAccountService)context.getBean("registerAccountService");
 
         SignUpRequest request = new SignUpRequest();
         request.setId( id );
@@ -62,10 +64,10 @@ public class SignUpServlet extends HttpServlet {
    //     request.setActivateServiceUrl( getServletContext().getRealPath( "/" ) + "activate" );
         request.setActivateServiceUrl(serverUrl  + "activate");
         try{
-           service.signUp( request );
-
+          // service.signUp( request );
+            registerAccountService.addAccount(request);
            resp.getWriter().print( "register Success, please use email to Activate you account!!!" );
-        }catch (RegisterServiceException e){
+        }catch (Exception e){
             resp.sendError( 400, e.getMessage() );
             return;
         }
