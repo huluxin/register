@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="register-web:war">
-    <output-path>$PROJECT_DIR$/register-web/target</output-path>
-    <root id="archive" name="register-web-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="register-web:war exploded" />
-    </root>
-  </artifact>
-</component>

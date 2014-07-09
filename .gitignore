@@ -1,2 +1,10 @@
-﻿.idea/
-/target/
+﻿/target/
+/.idea
+/register-captcha/register-captcha.iml
+/register-captcha/target
+/register-email/target
+/register-email/register-email.iml
+/register-persist/register-persist.iml
+/register-persist/target
+/register-service/register-service.iml
+/register-service/target
