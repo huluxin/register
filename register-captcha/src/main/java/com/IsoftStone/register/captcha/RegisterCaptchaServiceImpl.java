@@ -1,7 +1,7 @@
 package com.IsoftStone.register.captcha;
 
-import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.google.code.kaptcha.util.Config;
+//import com.google.code.kaptcha.impl.DefaultKaptcha;
+//import com.google.code.kaptcha.util.Config;
 import org.springframework.beans.factory.InitializingBean;
 
 import javax.imageio.ImageIO;
@@ -18,7 +18,7 @@ import java.util.Properties;
  */
 public class RegisterCaptchaServiceImpl implements RegisterCaptchaService,InitializingBean{
 
-    private DefaultKaptcha producer;
+//    private DefaultKaptcha producer;
 
     private List<String> preDefinedTexts;
 
@@ -32,8 +32,8 @@ public class RegisterCaptchaServiceImpl implements RegisterCaptchaService,Initia
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        producer = new DefaultKaptcha();
-        producer.setConfig(new Config(new Properties()));
+//        producer = new DefaultKaptcha();
+//        producer.setConfig(new Config(new Properties()));
     }
 
     @Override
@@ -54,7 +54,8 @@ public class RegisterCaptchaServiceImpl implements RegisterCaptchaService,Initia
             textCount = (textCount + 1) % preDefinedTexts.size();
             return text;
         }else{
-            return producer.createText();
+         //   return producer.createText();
+            return null;
         }
     }
 
@@ -67,14 +68,14 @@ public class RegisterCaptchaServiceImpl implements RegisterCaptchaService,Initia
             throw new RegisterCaptchaException( "Captch key '" + captchaKey + "' not found!" );
         }
 
-        BufferedImage image = producer.createImage(text);
+      //  BufferedImage image = producer.createImage(text);
         ByteArrayOutputStream out = new ByteArrayOutputStream();
 
-        try{
-            ImageIO.write(image,"jpg",out);
+        /*try{
+          //  ImageIO.write(image,"jpg",out);
         }catch (IOException e){
             throw new RegisterCaptchaException( "Failed to write captcha stream!", e );
-        }
+        }*/
         return out.toByteArray();
     }
 

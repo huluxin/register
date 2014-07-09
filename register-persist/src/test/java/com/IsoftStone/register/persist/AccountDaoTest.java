@@ -2,7 +2,7 @@ package com.IsoftStone.register.persist;
 
 import com.IsoftStone.register.dao.bo.RegisterAccountInf;
 import com.IsoftStone.register.dao.dto.AccountDTO;
-import org.apache.ibatis.session.SqlSessionFactory;
+//import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Created by Bachelor Wang on 2014/5/27.
  */
 public class AccountDaoTest {
-    private static SqlSessionFactory sqlSessionFactory = null;
+ //   private static SqlSessionFactory sqlSessionFactory = null;
     private RegisterAccountInf accountInf;
     @Before
     public void prepare() throws Exception{

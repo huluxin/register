@@ -1,4 +1,4 @@
-package com.IsoftStone.core;
+package com.IsoftStone.core.typeinfo;
 
 import com.IsoftStone.core.net.mindview.util.TypeCounter;
 import com.IsoftStone.core.typeinfo.pets.Pet;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/register.iml" filepath="$PROJECT_DIR$/register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register-captcha/register-captcha.iml" filepath="$PROJECT_DIR$/register-captcha/register-captcha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register-email/register-email.iml" filepath="$PROJECT_DIR$/register-email/register-email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register-persist/register-persist.iml" filepath="$PROJECT_DIR$/register-persist/register-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register-service/register-service.iml" filepath="$PROJECT_DIR$/register-service/register-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register-web/register-web.iml" filepath="$PROJECT_DIR$/register-web/register-web.iml" />
+    </modules>
+  </component>
+</project>
+
