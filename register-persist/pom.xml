@@ -63,6 +63,11 @@
             <artifactId>commons-dbcp</artifactId>
             <version>${commons-dbcp.version}</version>
         </dependency>
+        <dependency>
+            <groupId>maven</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.7-20060614</version>
+        </dependency>
     </dependencies>
 
     <build>
