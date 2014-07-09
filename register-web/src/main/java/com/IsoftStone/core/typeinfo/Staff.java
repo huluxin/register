@@ -42,7 +42,11 @@ public class Staff extends ArrayList<Position>{
                 "Software Engineer", "Test Engineer",
                 "Technical Writer");
         staff.fillPosition("President", new Person("Me", "Last", "The Top, Lonely At"));
-
+        staff.fillPosition("Project Lead",new Person("Janet", "Planner", "The Burbs"));
+        if(staff.positionAvailable("software Engineer")){
+            staff.fillPosition("Software Engineer",
+                    new Person("Bob", "Coder", "Bright Light City"));
+        }
         System.out.println(staff);
     }
 }
