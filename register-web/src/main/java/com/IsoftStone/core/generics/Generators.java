@@ -8,10 +8,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
+ * my change is to work
  * Created by Ivan Wang on 2014/7/13.
  */
 public class Generators {
-    public static <T> Collection<T> fill(Collection<T> coll, Generator<T> gen, int n) {
+    public static <T>Collection<T> fill(Collection<T> coll, Generator<T> gen, int n) {
         for (int i = 0; i < n; i++)
             coll.add(gen.next());
         return coll;
