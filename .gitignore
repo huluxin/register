@@ -11,3 +11,4 @@
 /register-web/target
 /register-web/register-web.iml
 /*.iml
+Rakefile
