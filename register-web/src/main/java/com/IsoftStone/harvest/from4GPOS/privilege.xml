@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+權限說明：
+0－公共權限
+1－訂單服務權限
+-->
+<privileges>
+    <!-- 公共權限開始-->
+    <privilege id="001" name="公共權限" dataPrivilege="false">
+        <desc>公共權限</desc>
+        <url>logout.do?method=forwardFunc</url>
+        <url>logout.do?method=cmplPosBis</url>
+        <url>logout.do?method=cmplCntBis</url>
+        <url>logout.do?method=cmplCntBisCheck</url>
+    </privilege>
+    <!-- 公共權限結束-->
+
+    <!-- 訂單服務開始 -->
+    <privilege id="110" name="超市訂貨" dataPrivilege="false">
+        <desc>超市訂貨</desc>
+        <url>order/PSCOrder.do?method=toMarketOrder</url>
+        <url>order/PSCOrder.do?method=resetOrderInSession</url>
+        <url>order/PSCOrder.do?method=findDistributor</url>
+        <url>order/PSCOrder.do?method=findProduct</url>
+        <url>order/PSCOrder.do?method=toPaperCoupon</url>
+        <url>order/PSCOrder.do?method=choosePaperCoupon</url>
+        <url>order/PSCOrder.do?method=toOrderDetail</url>
+        <url>order/PSCOrder.do?method=prePromotion</url>
+        <url>order/PSCOrder.do?method=toPromotion</url>
+        <url>order/PSCOrder.do?method=prePay</url>
+        <url>order/PSCOrder.do?method=toPay</url>
+        <url>payment.do?method=toPayment</url>
+        <url>payment.do?method=viewProducts</url>
+        <url>payment.do?method=addPaymentType</url>
+        <url>payment.do?method=checkBankCard</url>
+        <url>payment.do?method=preConfirm</url>
+        <url>payment.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment.do?method=toTicketResult</url>
+        <url>order/PSCOrder.do?method=toPrintNewVoucher</url>
+        <url>order/PSCOrder.do?method=toInstallAddress</url>
+        <url>order/PSCOrder.do?method=findDist4InstallAdr</url>
+        <url>order/PSCOrder.do?method=saveInstallAddress</url>
+        <url>order/PSCOrder.do?method=toProductCT</url>
+        <url>order/PSCOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+    </privilege>
+    <privilege id="120" name="重印發票" dataPrivilege="false">
+        <desc>重印發票</desc>
+        <url>order/orderQuery2.do?method=replaceOrder</url>
+        <url>payment2.do?method=toPaymentResult2</url>
+        <url>dailyReport.do?method=ReprintInvoiceReport</url>
+    </privilege>
+    <privilege id="130" name="作廢訂單" dataPrivilege="false">
+        <desc>作廢訂單</desc>
+        <url>order/orderQuery2.do?method=cancelOrder</url>
+        <url>order/orderQuery2.do?method=inputTicketInfo</url>
+        <url>order/orderQuery2.do?method=checkTicketInfo</url>
+        <url>order/orderQuery2.do?method=cancelTicketInfo</url>
+        <url>payment2.do?method=toPaymentResult2</url>
+    </privilege>
+    <privilege id="135" name="恢復訂單" dataPrivilege="false">
+        <desc>恢復訂單</desc>
+        <url>order/orderQuery2.do?method=resumeOrder</url>
+        <url>payment2.do?method=toPaymentResult2</url>
+    </privilege>
+    <privilege id="140" name="修改超市訂單" dataPrivilege="false">
+        <desc>修改超市訂單</desc>
+        <url>order/PSCOrder.do?method=toUpdateOrder</url>
+        <url>order/PSCOrder.do?method=resetOrderInSession</url>
+        <url>order/PSCOrder.do?method=findDistributor</url>
+        <url>order/PSCOrder.do?method=findProduct</url>
+        <url>order/PSCOrder.do?method=toPaperCoupon</url>
+        <url>order/PSCOrder.do?method=choosePaperCoupon</url>
+        <url>order/PSCOrder.do?method=toOrderDetail</url>
+        <url>order/PSCOrder.do?method=prePromotion</url>
+        <url>order/PSCOrder.do?method=toPromotion</url>
+        <url>order/PSCOrder.do?method=prePay</url>
+        <url>order/PSCOrder.do?method=toPay</url>
+        <url>payment.do?method=toPayment</url>
+        <url>payment.do?method=viewProducts</url>
+        <url>payment.do?method=addPaymentType</url>
+        <url>payment.do?method=checkBankCard</url>
+        <url>payment.do?method=preConfirm</url>
+        <url>payment.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment.do?method=toTicketResult</url>
+        <url>order/PSCOrder.do?method=toPrintNewVoucher</url>
+        <url>order/PSCOrder.do?method=toInstallAddress</url>
+        <url>order/PSCOrder.do?method=findDist4InstallAdr</url>
+        <url>order/PSCOrder.do?method=saveInstallAddress</url>
+        <url>order/PSCOrder.do?method=toProductCT</url>
+        <url>order/PSCOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+    </privilege>
+    <privilege id="150" name="訂單查詢" dataPrivilege="false">
+        <desc>訂單查詢</desc>
+        <url>order/orderQuery2.do?method=toQueryOrder</url>
+        <url>order/orderQuery2.do?method=queryOrders</url>
+        <url>order/orderQuery2.do?method=findOrderInfo</url>
+        <url>order/orderQuery2.do?method=resetFuncTypeession</url>
+        <url>order/orderQuery2.do?method=viewInstallAddress</url>
+        <url>order/orderQuery2.do?method=viewProductCT</url>
+        <url>order/orderQuery2.do?method=replaceVoucher</url>
+        <url>order/ticketQuery.do?method=init</url>
+        <url>order/ticketQuery.do?method=toTicketQuery</url>
+        <url>order/ticketQuery.do?method=toTicketView</url>
+        <url>order/ticketQuery.do?method=prePrintReserveTicket</url>
+    </privilege>
+    <!--
+    <privilege id="150" name="訂單查詢" dataPrivilege="false">
+        <desc>訂單查詢</desc>
+        <url>order/orderQuery.do?method=toQueryOrder</url>
+        <url>order/orderQuery.do?method=queryOrders</url>
+        <url>order/orderQuery.do?method=findOrderInfo</url>
+    </privilege>
+     -->
+    <privilege id="155" name="重印票券" dataPrivilege="false">
+        <desc>訂單查詢</desc>
+        <url>order/orderQuery2.do?method=toQueryOrder</url>
+        <url>order/orderQuery2.do?method=queryOrders</url>
+        <url>order/orderQuery2.do?method=findOrderInfo</url>
+        <url>order/orderQuery2.do?method=resetFuncTypeession</url>
+        <url>order/ticketQuery.do?method=init</url>
+        <url>order/ticketQuery.do?method=toTicketQuery</url>
+        <url>order/ticketQuery.do?method=toTicketView</url>
+        <url>order/ticketQuery.do?method=prePrintReserveTicket</url>
+    </privilege>
+
+    <privilege id="160" name="個人日結" dataPrivilege="false">
+        <desc>個人日結</desc>
+        <url>dailyReport.do?method=toDailyReportForm</url>
+        <url>dailyReport.do?method=queryStaffReport</url>
+        <url>dailyReport.do?method=printStaffReport</url>
+    </privilege>
+    <privilege id="170" name="中心日結" dataPrivilege="false">
+        <desc>中心日結</desc>
+        <url>dailyReport.do?method=toDailyReportForm</url>
+        <url>dailyReport.do?method=queryCentreReport</url>
+        <url>dailyReport.do?method=printCentreReport</url>
+    </privilege>
+    <privilege id="180" name="作廢總表" dataPrivilege="false">
+        <desc>作廢總表</desc>
+        <url>dailyReport.do?method=toDailyReportForm</url>
+        <url>dailyReport.do?method=queryOrderCanceledReport</url>
+        <url>dailyReport.do?method=printOrderCanceledReport</url>
+    </privilege>
+    <!--
+    <privilege id="190" name="許可權管理" dataPrivilege="false">
+        <desc>許可權管理</desc>
+        <url></url>
+    </privilege>
+     -->
+    <privilege id="1901" name="角色維護" dataPrivilege="false">
+        <desc>角色維護</desc>
+        <url>privilege/privilege.do?method=initInfo</url>
+        <url>privilege/privilege.do?method=querySystemRole</url>
+        <url>privilege/privilege.do?method=addSystemRole</url>
+        <url>privilege/privilege.do?method=saveOrUpdateSystemRole</url>
+        <url>privilege/privilege.do?method=toPrivilegeAssign</url>
+        <url>privilege/privilege.do?method=deleteSystemRole</url>
+        <url>privilege/privilegeAssign.do?method=privilegeAssign</url>
+    </privilege>
+    <privilege id="1902" name="用戶角色分配" dataPrivilege="false">
+        <desc>用戶角色分配</desc>
+        <url>privilege/privilege.do?method=initRole</url>
+        <url>privilege/staff.do?method=queryStaff</url>
+        <url>privilege/staff.do?method=toRoleAssign</url>
+        <url>privilege/roleAssign.do?method=roleAssign</url>
+    </privilege>
+    <privilege id="1903" name="職員管理" dataPrivilege="false">
+        <desc>職員管理</desc>
+        <url>systemMng.do?method=forwardFunc</url>
+        <url>systemMng.do?method=queryStaff</url>
+        <url>systemMng.do?method=saveStaff</url>
+        <url>systemMng.do?method=deleteStaff</url>
+    </privilege>
+    <privilege id="1904" name="重置密碼" dataPrivilege="false">
+        <desc>重置密碼</desc>
+        <url>pwdMng.do?method=forwardFunc</url>
+        <url>pwdMng.do?method=queryStaff</url>
+        <url>systemMng.do?method=resetPassword</url>
+    </privilege>
+    <privilege id="1905" name="參數設定" dataPrivilege="false">
+        <desc>參數設定</desc>
+        <url>systemMng.do?method=setParameter</url>
+        <url>systemMng.do?method=getParameter</url>
+    </privilege>
+    <privilege id="1906" name="顧客資料同步" dataPrivilege="false">
+        <desc>顧客資料同步</desc>
+        <url>dataSynchronizer.do?method=toClientSynchronization</url>
+        <url>dataSynchronizer.do?method=synchronizationClientInfo</url>
+    </privilege>
+    <privilege id="1907" name="SKU賣量查詢" dataPrivilege="false">
+        <desc>SKU賣量查詢</desc>
+        <url>order/orderQuery2.do?method=toProductSaleQuery</url>
+        <url>order/orderQuery2.do?method=queryProductSale</url>
+    </privilege>
+    <privilege id="1908" name="歷史訂單資料同步" dataPrivilege="false">
+        <desc>歷史訂單資料同步</desc>
+        <url>oldOrderSynchronizer.do?method=toOldOrderSynchronization</url>
+        <url>oldOrderSynchronizer.do?method=synchronizationOldOrder</url>
+    </privilege>
+    <privilege id="1909" name="聯名卡資料上傳" dataPrivilege="false">
+        <desc>聯名卡資料上傳</desc>
+        <url>distributor/creditCardUpload.do?method=toCreditCardUploadForm</url>
+        <url>distributor/creditCardUpload.do?method=creditCardUpload</url>
+        <url>distributor/creditCardUpload.do?method=toCreditCardUploadQuery</url>
+        <url>distributor/creditCardUpload.do?method=queryCreditCardUpload</url>
+    </privilege>
+    <privilege id="1910" name="帶檔續約報表" dataPrivilege="false">
+        <desc>帶檔續約報表</desc>
+        <url>distributor/creditCardUpload.do?method=toCreditCardFailedQuery</url>
+        <url>distributor/creditCardUpload.do?method=queryCreditCardFailed</url>
+    </privilege>
+    <privilege id="1911" name="IBON續約報表" dataPrivilege="false">
+        <desc>IBON續約報表</desc>
+        <url>distributor/ibonRenewalQuery.do?method=toIbonRenewalQuery</url>
+        <url>distributor/ibonRenewalQuery.do?method=queryIbonRenewalTable</url>
+    </privilege>
+    <privilege id="1912" name="超商條碼續約报表" dataPrivilege="false">
+        <desc>超商條碼續約报表</desc>
+        <url>distributor/barcRenewalQuery.do?method=toBarcRenewalQuery</url>
+        <url>distributor/barcRenewalQuery.do?method=queryBarcRenewalTable</url>
+    </privilege>
+    <!-- privilege id="1905" name="產品差異分析" dataPrivilege="false">
+        <desc>產品差異分析</desc>
+        <url>dataSynchronizer.do?method=toDifferenceAnalyse</url>
+        <url>dataSynchronizer.do?method=differenceAnalyse</url>
+        <url>dataSynchronizer.do?method=fixProduct</url>
+    </privilege>
+    <privilege id="1906" name="批量資料同步" dataPrivilege="false">
+        <desc>批量資料同步</desc>
+        <url>dataSynchronizer.do?method=toBatchSyn</url>
+        <url>dataSynchronizer.do?method=batchSyn</url>
+    </privilege-->
+    <!-- 訂單服務結束 -->
+    <privilege id="1913" name="POS訂單資料上傳" dataPrivilege="false">
+        <desc>POS訂單資料上傳</desc>
+        <url>orderSynchronizer.do?method=toOrderSyn6000To400</url>
+        <url>orderSynchronizer.do?method=syncOrder6000To400</url>
+        <url>orderSynchronizer.do?method=queryOrderNotSyn</url>
+        <url>order/orderQuery2.do?method=findOrderInfo</url>
+        <url>order/orderQuery2.do?method=viewInstallAddress</url>
+        <url>order/orderQuery2.do?method=viewProductCT</url>
+        <url>order/ticketQuery.do?method=init</url>
+        <url>order/ticketQuery.do?method=toTicketQuery</url>
+        <url>order/ticketQuery.do?method=toTicketView</url>
+    </privilege>
+    <!-- 宅配訂單服務 -->
+    <privilege id="310" name="櫃檯訂貨" dataPrivilege="false">
+        <desc>櫃檯訂貨</desc>
+        <url>order/CTROrder.do?method=toMarketOrder</url>
+        <url>order/CTROrder.do?method=resetOrderInSession</url>
+        <url>order/CTROrder.do?method=findDistributor</url>
+        <url>order/CTROrder.do?method=findProduct</url>
+        <url>order/CTROrder.do?method=toPaperCoupon</url>
+        <url>order/CTROrder.do?method=choosePaperCoupon</url>
+        <url>order/CTROrder.do?method=toOrderDetail</url>
+        <url>order/CTROrder.do?method=prePromotion</url>
+        <url>order/CTROrder.do?method=toPromotion</url>
+        <url>order/CTROrder.do?method=prePay</url>
+        <url>order/CTROrder.do?method=toPay</url>
+        <url>order/CTROrder.do?method=toInstallAddress</url>
+        <url>order/CTROrder.do?method=toPrintNewVoucher</url>
+        <url>order/CTROrder.do?method=findDist4InstallAdr</url>
+        <url>order/CTROrder.do?method=saveInstallAddress</url>
+        <url>order/CTROrder.do?method=toOrderAddrTemp</url>
+        <url>order/CTROrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/CTROrder.do?method=saveOrderAddrTemp</url>
+        <url>order/CTROrder.do?method=toProductCT</url>
+        <url>order/CTROrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="320" name="電話訂貨" dataPrivilege="false">
+        <desc>電話訂貨</desc>
+        <url>order/TPDOrder.do?method=toMarketOrder</url>
+        <url>order/TPDOrder.do?method=resetOrderInSession</url>
+        <url>order/TPDOrder.do?method=findDistributor</url>
+        <url>order/TPDOrder.do?method=findProduct</url>
+        <url>order/TPDOrder.do?method=toPaperCoupon</url>
+        <url>order/TPDOrder.do?method=choosePaperCoupon</url>
+        <url>order/TPDOrder.do?method=toOrderDetail</url>
+        <url>order/TPDOrder.do?method=prePromotion</url>
+        <url>order/TPDOrder.do?method=toPromotion</url>
+        <url>order/TPDOrder.do?method=prePay</url>
+        <url>order/TPDOrder.do?method=toPay</url>
+        <url>order/TPDOrder.do?method=toInstallAddress</url>
+        <url>order/TPDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/TPDOrder.do?method=saveInstallAddress</url>
+        <url>order/TPDOrder.do?method=toOrderAddrForever</url>
+        <url>order/TPDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/TPDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/TPDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/TPDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/TPDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/TPDOrder.do?method=toProductCT</url>
+        <url>order/TPDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="330" name="郵寄訂貨" dataPrivilege="false">
+        <desc>郵寄訂貨</desc>
+        <url>order/MLDOrder.do?method=toMarketOrder</url>
+        <url>order/MLDOrder.do?method=resetOrderInSession</url>
+        <url>order/MLDOrder.do?method=findDistributor</url>
+        <url>order/MLDOrder.do?method=findProduct</url>
+        <url>order/MLDOrder.do?method=toPaperCoupon</url>
+        <url>order/MLDOrder.do?method=choosePaperCoupon</url>
+        <url>order/MLDOrder.do?method=toOrderDetail</url>
+        <url>order/MLDOrder.do?method=prePromotion</url>
+        <url>order/MLDOrder.do?method=toPromotion</url>
+        <url>order/MLDOrder.do?method=prePay</url>
+        <url>order/MLDOrder.do?method=toPay</url>
+        <url>order/MLDOrder.do?method=toInstallAddress</url>
+        <url>order/MLDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/MLDOrder.do?method=saveInstallAddress</url>
+        <url>order/MLDOrder.do?method=toOrderAddrForever</url>
+        <url>order/MLDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/MLDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/MLDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/MLDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/MLDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/MLDOrder.do?method=toProductCT</url>
+        <url>order/MLDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="340" name="傳真訂貨" dataPrivilege="false">
+        <desc>傳真訂貨</desc>
+        <url>order/FXDOrder.do?method=toMarketOrder</url>
+        <url>order/FXDOrder.do?method=resetOrderInSession</url>
+        <url>order/FXDOrder.do?method=findDistributor</url>
+        <url>order/FXDOrder.do?method=findProduct</url>
+        <url>order/FXDOrder.do?method=toPaperCoupon</url>
+        <url>order/FXDOrder.do?method=choosePaperCoupon</url>
+        <url>order/FXDOrder.do?method=toOrderDetail</url>
+        <url>order/FXDOrder.do?method=prePromotion</url>
+        <url>order/FXDOrder.do?method=toPromotion</url>
+        <url>order/FXDOrder.do?method=prePay</url>
+        <url>order/FXDOrder.do?method=toPay</url>
+        <url>order/FXDOrder.do?method=toInstallAddress</url>
+        <url>order/FXDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/FXDOrder.do?method=saveInstallAddress</url>
+        <url>order/FXDOrder.do?method=toOrderAddrForever</url>
+        <url>order/FXDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/FXDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/FXDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/FXDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/FXDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/FXDOrder.do?method=toProductCT</url>
+        <url>order/FXDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="350" name="到府維修訂貨" dataPrivilege="false">
+        <desc>到府維修訂貨</desc>
+        <url>order/REPOrder.do?method=toMarketOrder</url>
+        <url>order/REPOrder.do?method=resetOrderInSession</url>
+        <url>order/REPOrder.do?method=findDistributor</url>
+        <url>order/REPOrder.do?method=findProduct</url>
+        <url>order/REPOrder.do?method=toPaperCoupon</url>
+        <url>order/REPOrder.do?method=choosePaperCoupon</url>
+        <url>order/REPOrder.do?method=toOrderDetail</url>
+        <url>order/REPOrder.do?method=prePromotion</url>
+        <url>order/REPOrder.do?method=toPromotion</url>
+        <url>order/REPOrder.do?method=prePay</url>
+        <url>order/REPOrder.do?method=toPay</url>
+        <url>order/REPOrder.do?method=toInstallAddress</url>
+        <url>order/REPOrder.do?method=findDist4InstallAdr</url>
+        <url>order/REPOrder.do?method=saveInstallAddress</url>
+        <url>order/REPOrder.do?method=toOrderAddrForever</url>
+        <url>order/REPOrder.do?method=saveOrderAddrForever</url>
+        <url>order/REPOrder.do?method=toOrderAddrTemp</url>
+        <url>order/REPOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/REPOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/REPOrder.do?method=toPrintNewVoucher</url>
+        <url>order/REPOrder.do?method=toProductCT</url>
+        <url>order/REPOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="3510" name="金門花蓮超市" dataPrivilege="false">
+        <desc>金門花蓮超市</desc>
+        <url>order/KWPOSOrder.do?method=toMarketOrder</url>
+        <url>order/KWPOSOrder.do?method=resetOrderInSession</url>
+        <url>order/KWPOSOrder.do?method=findDistributor</url>
+        <url>order/KWPOSOrder.do?method=findProduct</url>
+        <url>order/KWPOSOrder.do?method=toPaperCoupon</url>
+        <url>order/KWPOSOrder.do?method=choosePaperCoupon</url>
+        <url>order/KWPOSOrder.do?method=toOrderDetail</url>
+        <url>order/KWPOSOrder.do?method=prePromotion</url>
+        <url>order/KWPOSOrder.do?method=toPromotion</url>
+        <url>order/KWPOSOrder.do?method=prePay</url>
+        <url>order/KWPOSOrder.do?method=toPay</url>
+        <url>order/KWPOSOrder.do?method=toInstallAddress</url>
+        <url>order/KWPOSOrder.do?method=findDist4InstallAdr</url>
+        <url>order/KWPOSOrder.do?method=saveInstallAddress</url>
+        <url>order/KWPOSOrder.do?method=toProductCT</url>
+        <url>order/KWPOSOrder.do?method=saveProductCT</url>
+        <url>order/KWPOrder.do?method=toPrintNewVoucher</url>
+        <url>order/KWPOrder.do?method=toProductCT</url>
+        <url>order/KWPOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="3520" name="金門花蓮宅配" dataPrivilege="false">
+        <desc>金門花蓮宅配</desc>
+        <url>order/KWTTOrder.do?method=toMarketOrder</url>
+        <url>order/KWTTOrder.do?method=resetOrderInSession</url>
+        <url>order/KWTTOrder.do?method=findDistributor</url>
+        <url>order/KWTTOrder.do?method=findProduct</url>
+        <url>order/KWTTOrder.do?method=toPaperCoupon</url>
+        <url>order/KWTTOrder.do?method=choosePaperCoupon</url>
+        <url>order/KWTTOrder.do?method=toOrderDetail</url>
+        <url>order/KWTTOrder.do?method=prePromotion</url>
+        <url>order/KWTTOrder.do?method=toPromotion</url>
+        <url>order/KWTTOrder.do?method=prePay</url>
+        <url>order/KWTTOrder.do?method=toPay</url>
+        <url>order/KWTTOrder.do?method=toInstallAddress</url>
+        <url>order/KWTTOrder.do?method=findDist4InstallAdr</url>
+        <url>order/KWTTOrder.do?method=saveInstallAddress</url>
+        <url>order/KWTTOrder.do?method=toPrintNewVoucher</url>
+        <url>order/KWTTOrder.do?method=toProductCT</url>
+        <url>order/KWTTOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="360" name="修改櫃檯訂單" dataPrivilege="false">
+        <desc>修改櫃檯訂單</desc>
+        <url>order/CTROrder.do?method=toUpdateOrder</url>
+        <url>order/CTROrder.do?method=resetOrderInSession</url>
+        <url>order/CTROrder.do?method=findDistributor</url>
+        <url>order/CTROrder.do?method=findProduct</url>
+        <url>order/CTROrder.do?method=toPaperCoupon</url>
+        <url>order/CTROrder.do?method=choosePaperCoupon</url>
+        <url>order/CTROrder.do?method=toOrderDetail</url>
+        <url>order/CTROrder.do?method=prePromotion</url>
+        <url>order/CTROrder.do?method=toPromotion</url>
+        <url>order/CTROrder.do?method=prePay</url>
+        <url>order/CTROrder.do?method=toPay</url>
+        <url>order/CTROrder.do?method=toInstallAddress</url>
+        <url>order/CTROrder.do?method=findDist4InstallAdr</url>
+        <url>order/CTROrder.do?method=saveInstallAddress</url>
+        <url>order/CTROrder.do?method=toOrderAddrTemp</url>
+        <url>order/CTROrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/CTROrder.do?method=saveOrderAddrTemp</url>
+        <url>order/CTROrder.do?method=toPrintNewVoucher</url>
+        <url>order/CTROrder.do?method=toProductCT</url>
+        <url>order/CTROrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="361" name="修改網路訂單" dataPrivilege="false">
+        <desc>修改網路訂單</desc>
+        <url>order/ITDOrder.do?method=toUpdateOrder</url>
+        <url>order/ITDOrder.do?method=resetOrderInSession</url>
+        <url>order/ITDOrder.do?method=findDistributor</url>
+        <url>order/ITDOrder.do?method=findProduct</url>
+        <url>order/ITDOrder.do?method=toPaperCoupon</url>
+        <url>order/ITDOrder.do?method=choosePaperCoupon</url>
+        <url>order/ITDOrder.do?method=toOrderDetail</url>
+        <url>order/ITDOrder.do?method=prePromotion</url>
+        <url>order/ITDOrder.do?method=toPromotion</url>
+        <url>order/ITDOrder.do?method=prePay</url>
+        <url>order/ITDOrder.do?method=toPay</url>
+        <url>order/ITDOrder.do?method=toInstallAddress</url>
+        <url>order/ITDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/ITDOrder.do?method=saveInstallAddress</url>
+        <url>order/ITDOrder.do?method=toOrderAddrForever</url>
+        <url>order/ITDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/ITDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/ITDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/ITDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/ITDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/ITDOrder.do?method=toProductCT</url>
+        <url>order/ITDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="362" name="修改語音訂單" dataPrivilege="false">
+        <desc>修改語音訂單</desc>
+        <url>order/VRDOrder.do?method=toUpdateOrder</url>
+        <url>order/VRDOrder.do?method=resetOrderInSession</url>
+        <url>order/VRDOrder.do?method=findDistributor</url>
+        <url>order/VRDOrder.do?method=findProduct</url>
+        <url>order/VRDOrder.do?method=toPaperCoupon</url>
+        <url>order/VRDOrder.do?method=choosePaperCoupon</url>
+        <url>order/VRDOrder.do?method=toOrderDetail</url>
+        <url>order/VRDOrder.do?method=prePromotion</url>
+        <url>order/VRDOrder.do?method=toPromotion</url>
+        <url>order/VRDOrder.do?method=prePay</url>
+        <url>order/VRDOrder.do?method=toPay</url>
+        <url>order/VRDOrder.do?method=toInstallAddress</url>
+        <url>order/VRDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/VRDOrder.do?method=saveInstallAddress</url>
+        <url>order/VRDOrder.do?method=toOrderAddrForever</url>
+        <url>order/VRDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/VRDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/VRDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/VRDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/VRDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/VRDOrder.do?method=toProductCT</url>
+        <url>order/VRDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+    <privilege id="363" name="修改PDA訂單" dataPrivilege="false">
+        <desc>修改PDA訂單</desc>
+        <url>order/PDAOrder.do?method=toUpdateOrder</url>
+        <url>order/PDAOrder.do?method=resetOrderInSession</url>
+        <url>order/PDAOrder.do?method=findDistributor</url>
+        <url>order/PDAOrder.do?method=findProduct</url>
+        <url>order/PDAOrder.do?method=toPaperCoupon</url>
+        <url>order/PDAOrder.do?method=choosePaperCoupon</url>
+        <url>order/PDAOrder.do?method=toOrderDetail</url>
+        <url>order/PDAOrder.do?method=prePromotion</url>
+        <url>order/PDAOrder.do?method=toPromotion</url>
+        <url>order/PDAOrder.do?method=prePay</url>
+        <url>order/PDAOrder.do?method=toPay</url>
+        <url>order/PDAOrder.do?method=toInstallAddress</url>
+        <url>order/PDAOrder.do?method=findDist4InstallAdr</url>
+        <url>order/PDAOrder.do?method=saveInstallAddress</url>
+        <url>order/PDAOrder.do?method=toOrderAddrForever</url>
+        <url>order/PDAOrder.do?method=saveOrderAddrForever</url>
+        <url>order/PDAOrder.do?method=toOrderAddrTemp</url>
+        <url>order/PDAOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/PDAOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/PDAOrder.do?method=toPrintNewVoucher</url>
+        <url>order/PDAOrder.do?method=toProductCT</url>
+        <url>order/PDAOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+    <privilege id="363" name="修改MOB訂單" dataPrivilege="false">
+        <desc>修改MOB訂單</desc>
+        <url>order/MOBOrder.do?method=toUpdateOrder</url>
+        <url>order/MOBOrder.do?method=resetOrderInSession</url>
+        <url>order/MOBOrder.do?method=findDistributor</url>
+        <url>order/MOBOrder.do?method=findProduct</url>
+        <url>order/MOBOrder.do?method=toPaperCoupon</url>
+        <url>order/MOBOrder.do?method=choosePaperCoupon</url>
+        <url>order/MOBOrder.do?method=toOrderDetail</url>
+        <url>order/MOBOrder.do?method=prePromotion</url>
+        <url>order/MOBOrder.do?method=toPromotion</url>
+        <url>order/MOBOrder.do?method=prePay</url>
+        <url>order/MOBOrder.do?method=toPay</url>
+        <url>order/MOBOrder.do?method=toInstallAddress</url>
+        <url>order/MOBOrder.do?method=findDist4InstallAdr</url>
+        <url>order/MOBOrder.do?method=saveInstallAddress</url>
+        <url>order/MOBOrder.do?method=toOrderAddrForever</url>
+        <url>order/MOBOrder.do?method=saveOrderAddrForever</url>
+        <url>order/MOBOrder.do?method=toOrderAddrTemp</url>
+        <url>order/MOBOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/MOBOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/MOBOrder.do?method=toPrintNewVoucher</url>
+        <url>order/MOBOrder.do?method=toProductCT</url>
+        <url>order/MOBOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="370" name="修改電話訂單" dataPrivilege="false">
+        <desc>修改電話訂單</desc>
+        <url>order/TPDOrder.do?method=toUpdateOrder</url>
+        <url>order/TPDOrder.do?method=resetOrderInSession</url>
+        <url>order/TPDOrder.do?method=findDistributor</url>
+        <url>order/TPDOrder.do?method=findProduct</url>
+        <url>order/TPDOrder.do?method=toPaperCoupon</url>
+        <url>order/TPDOrder.do?method=choosePaperCoupon</url>
+        <url>order/TPDOrder.do?method=toOrderDetail</url>
+        <url>order/TPDOrder.do?method=prePromotion</url>
+        <url>order/TPDOrder.do?method=toPromotion</url>
+        <url>order/TPDOrder.do?method=prePay</url>
+        <url>order/TPDOrder.do?method=toPay</url>
+        <url>order/TPDOrder.do?method=toInstallAddress</url>
+        <url>order/TPDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/TPDOrder.do?method=saveInstallAddress</url>
+        <url>order/TPDOrder.do?method=toOrderAddrForever</url>
+        <url>order/TPDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/TPDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/TPDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/TPDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/TPDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/TPDOrder.do?method=toProductCT</url>
+        <url>order/TPDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="380" name="修改郵寄訂單" dataPrivilege="false">
+        <desc>修改郵寄訂單</desc>
+        <url>order/MLDOrder.do?method=toUpdateOrder</url>
+        <url>order/MLDOrder.do?method=resetOrderInSession</url>
+        <url>order/MLDOrder.do?method=findDistributor</url>
+        <url>order/MLDOrder.do?method=findProduct</url>
+        <url>order/MLDOrder.do?method=toPaperCoupon</url>
+        <url>order/MLDOrder.do?method=choosePaperCoupon</url>
+        <url>order/MLDOrder.do?method=toOrderDetail</url>
+        <url>order/MLDOrder.do?method=prePromotion</url>
+        <url>order/MLDOrder.do?method=toPromotion</url>
+        <url>order/MLDOrder.do?method=prePay</url>
+        <url>order/MLDOrder.do?method=toPay</url>
+        <url>order/MLDOrder.do?method=toInstallAddress</url>
+        <url>order/MLDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/MLDOrder.do?method=saveInstallAddress</url>
+        <url>order/MLDOrder.do?method=toOrderAddrForever</url>
+        <url>order/MLDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/MLDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/MLDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/MLDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/MLDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/MLDOrder.do?method=toProductCT</url>
+        <url>order/MLDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="390" name="修改傳真訂單" dataPrivilege="false">
+        <desc>修改傳真訂單</desc>
+        <url>order/FXDOrder.do?method=toUpdateOrder</url>
+        <url>order/FXDOrder.do?method=resetOrderInSession</url>
+        <url>order/FXDOrder.do?method=findDistributor</url>
+        <url>order/FXDOrder.do?method=findProduct</url>
+        <url>order/FXDOrder.do?method=toPaperCoupon</url>
+        <url>order/FXDOrder.do?method=choosePaperCoupon</url>
+        <url>order/FXDOrder.do?method=toOrderDetail</url>
+        <url>order/FXDOrder.do?method=prePromotion</url>
+        <url>order/FXDOrder.do?method=toPromotion</url>
+        <url>order/FXDOrder.do?method=prePay</url>
+        <url>order/FXDOrder.do?method=toPay</url>
+        <url>order/FXDOrder.do?method=toInstallAddress</url>
+        <url>order/FXDOrder.do?method=findDist4InstallAdr</url>
+        <url>order/FXDOrder.do?method=saveInstallAddress</url>
+        <url>order/FXDOrder.do?method=toOrderAddrForever</url>
+        <url>order/FXDOrder.do?method=saveOrderAddrForever</url>
+        <url>order/FXDOrder.do?method=toOrderAddrTemp</url>
+        <url>order/FXDOrder.do?method=findDist4OrderAddrTemp</url>
+        <url>order/FXDOrder.do?method=saveOrderAddrTemp</url>
+        <url>order/FXDOrder.do?method=toPrintNewVoucher</url>
+        <url>order/FXDOrder.do?method=toProductCT</url>
+        <url>order/FXDOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="400" name="修改金門花蓮超市訂單" dataPrivilege="false">
+        <desc>修改金門花蓮超市訂單</desc>
+        <url>order/KWPOSOrder.do?method=toUpdateOrder</url>
+        <url>order/KWPOSOrder.do?method=resetOrderInSession</url>
+        <url>order/KWPOSOrder.do?method=findDistributor</url>
+        <url>order/KWPOSOrder.do?method=findProduct</url>
+        <url>order/KWPOSOrder.do?method=toPaperCoupon</url>
+        <url>order/KWPOSOrder.do?method=choosePaperCoupon</url>
+        <url>order/KWPOSOrder.do?method=toOrderDetail</url>
+        <url>order/KWPOSOrder.do?method=prePromotion</url>
+        <url>order/KWPOSOrder.do?method=toPromotion</url>
+        <url>order/KWPOSOrder.do?method=prePay</url>
+        <url>order/KWPOSOrder.do?method=toPay</url>
+        <url>order/KWPOSOrder.do?method=toInstallAddress</url>
+        <url>order/KWPOSOrder.do?method=findDist4InstallAdr</url>
+        <url>order/KWPOSOrder.do?method=saveInstallAddress</url>
+        <url>order/KWPOSOrder.do?method=toPrintNewVoucher</url>
+        <url>order/KWPOSOrder.do?method=toProductCT</url>
+        <url>order/KWPOSOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="410" name="修改金門花蓮宅配訂單" dataPrivilege="false">
+        <desc>修改金門花蓮宅配訂單</desc>
+        <url>order/KWTTOrder.do?method=toUpdateOrder</url>
+        <url>order/KWTTOrder.do?method=resetOrderInSession</url>
+        <url>order/KWTTOrder.do?method=findDistributor</url>
+        <url>order/KWTTOrder.do?method=findProduct</url>
+        <url>order/KWTTOrder.do?method=toPaperCoupon</url>
+        <url>order/KWTTOrder.do?method=choosePaperCoupon</url>
+        <url>order/KWTTOrder.do?method=toOrderDetail</url>
+        <url>order/KWTTOrder.do?method=prePromotion</url>
+        <url>order/KWTTOrder.do?method=toPromotion</url>
+        <url>order/KWTTOrder.do?method=prePay</url>
+        <url>order/KWTTOrder.do?method=toPay</url>
+        <url>order/KWTTOrder.do?method=toInstallAddress</url>
+        <url>order/KWTTOrder.do?method=findDist4InstallAdr</url>
+        <url>order/KWTTOrder.do?method=saveInstallAddress</url>
+        <url>order/KWTTOrder.do?method=toPrintNewVoucher</url>
+        <url>order/KWTTOrder.do?method=toProductCT</url>
+        <url>order/KWTTOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="420" name="團單" dataPrivilege="false">
+        <desc>團單</desc>
+        <url>order/PSCOrder.do?method=toGroupOrder</url>
+        <url>order/PSCOrder.do?method=resetOrderInSession</url>
+        <url>order/PSCOrder.do?method=findDistributor</url>
+        <url>order/PSCOrder.do?method=findProduct</url>
+        <url>order/PSCOrder.do?method=toPaperCoupon</url>
+        <url>order/PSCOrder.do?method=choosePaperCoupon</url>
+        <url>order/PSCOrder.do?method=toOrderDetail</url>
+        <url>order/PSCOrder.do?method=prePromotion</url>
+        <url>order/PSCOrder.do?method=toPromotion</url>
+        <url>order/PSCOrder.do?method=prePay</url>
+        <url>order/PSCOrder.do?method=toPay</url>
+        <url>payment.do?method=toPayment</url>
+        <url>payment.do?method=viewProducts</url>
+        <url>payment.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment.do?method=preConfirm</url>
+        <url>payment.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>order/PSCOrder.do?method=toInstallAddress</url>
+        <url>order/PSCOrder.do?method=findDist4InstallAdr</url>
+        <url>order/PSCOrder.do?method=saveInstallAddress</url>
+        <url>order/PSCOrder.do?method=toPrintNewVoucher</url>
+        <url>order/PSCOrder.do?method=toProductCT</url>
+        <url>order/PSCOrder.do?method=saveProductCT</url>
+        <url>order/groupOrder.do?method=toGroupOrder</url>
+        <url>order/groupOrder.do?method=toGroupOrderPrint</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+    </privilege>
+
+    <privilege id="430" name="顧客發票" dataPrivilege="false">
+        <desc>顧客發票</desc>
+        <url>order/CUMINVOrder.do?method=toCustomerInvoice</url>
+        <url>order/CUMINVOrder.do?method=resetCIOrderInSession</url>
+        <url>order/CUMINVOrder.do?method=findDist4CustomerInvoice</url>
+        <url>order/CUMINVOrder.do?method=preSaveCustomerInvoice</url>
+        <url>order/CUMINVOrder.do?method=saveCustomerInvoice</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+    </privilege>
+
+
+    <privilege id="440" name="加　入" dataPrivilege="false">
+        <desc>加　入</desc>
+        <url>distributor/entry.do?method=toEntryQuery</url>
+        <url>distributor/entry.do?method=doEntryQuery</url>
+        <url>distributor/entry.do?method=toEntryForm</url>
+        <url>distributor/entry.do?method=toDistEntry</url>
+        <url>distributor/entry.do?method=doDistEntry</url>
+        <url>distributor/entry.do?method=toPMEntry</url>
+        <url>distributor/entry.do?method=doPMEntry</url>
+        <url>distributor/entry.do?method=toPM2Dist</url>
+        <url>distributor/entry.do?method=doPM2Dist</url>
+        <url>distributor/entry.do?method=doPrint</url>
+        <url>distributor/entry.do?method=getDistributorName</url>
+        <url>distributor/entry.do?method=doCheckContractNumber</url>
+        <url>distributor/entry.do?method=checkOrderDist</url>
+        <url>payment2.do?method=toPaymentResult2</url>
+    </privilege>
+
+    <privilege id="450" name="續　約" dataPrivilege="false">
+        <desc>續　約</desc>
+        <url>distributor/renewal.do?method=toRenewalQuery</url>
+        <url>distributor/renewal.do?method=doRenewalCheck</url>
+        <url>distributor/renewal.do?method=doDistributorQuery</url>
+        <url>distributor/renewal.do?method=doRenewalQuery</url>
+        <url>distributor/renewal.do?method=doRenewal</url>
+        <url>distributor/renewal.do?method=doPrint</url>
+        <url>distributor/renewal.do?method=renewalTypeCheck</url>
+        <url>distributor/renewal.do?method=checkOrderDist</url>
+        <url>payment2.do?method=addPaymentType</url>
+    </privilege>
+
+    <privilege id="451" name="轉組/變更推薦人" dataPrivilege="false">
+        <desc>轉組/變更推薦人</desc>
+        <url>distributor/move.do?method=toMoveForm</url>
+        <url>distributor/move.do?method=getDistInfo</url>
+        <url>distributor/move.do?method=move</url>
+        <url>distributor/move.do?method=getDistributorName</url>
+    </privilege>
+
+    <privilege id="452" name="恢復直銷權" dataPrivilege="false">
+        <desc>恢復直銷權</desc>
+        <url>distributor/reactivate.do?method=toReactivateForm</url>
+        <url>distributor/reactivate.do?method=getDistInfo</url>
+        <url>distributor/reactivate.do?method=reactivate</url>
+    </privilege>
+
+    <privilege id="453" name="取消續約" dataPrivilege="false">
+        <desc>取消續約</desc>
+        <url>distributor/renewalCancel.do?method=toDistInfosQuery</url>
+        <url>distributor/renewalCancel.do?method=findDistInfos</url>
+        <url>distributor/renewalCancel.do?method=findBatches</url>
+        <url>distributor/renewalCancel.do?method=getDistInfo</url>
+        <url>distributor/renewalCancel.do?method=renewalCancel</url>
+        <url>distributor/remove.do?method=getReactivateDistInfo</url>
+        <url>distributor/remove.do?method=removeDistReactivate</url>
+    </privilege>
+
+    <privilege id="455" name="加入/續約日結" dataPrivilege="false">
+        <desc>加入/續約日結</desc>
+        <url>distributor/daily.do?method=toDailyForm</url>
+        <url>distributor/daily.do?method=queryPaymentResult</url>
+        <url>distributor/daily.do?method=queryItemCountResult</url>
+        <url>distributor/daily.do?method=queryDailyResult</url>
+        <url>distributor/daily.do?method=queryResultDetail</url>
+
+        <url>distributor/daily.do?method=toReprint</url>
+
+        <url>distributor/daily.do?method=toLateRenewalByCreditForm</url>
+        <url>distributor/daily.do?method=queryLateRenewalByCreditResult</url>
+        <url>distributor/daily.do?method=couponAndPointCheckOut</url>
+    </privilege>
+
+    <privilege id="456" name="批次重印ADA卡" dataPrivilege="false">
+        <desc>批次重印ADA卡</desc>
+        <url>distributor/newAdaRePri.do?method=toBatchPrintForm</url>
+        <url>distributor/newAdaRePri.do?method=queryBatchResultDetail</url>
+        <url>distributor/newAdaRePri.do?method=batchPrintADACards</url>
+    </privilege>
+
+    <privilege id="457" name="ADA卡補發記錄查詢" dataPrivilege="false">
+        <desc>ADA卡補發記錄查詢</desc>
+        <url>distributor/newAdaRePri.do?method=toPrintLogQuery</url>
+        <url>distributor/newAdaRePri.do?method=queryPrintLogTable</url>
+    </privilege>
+
+    <privilege id="458" name="續約記錄查詢" dataPrivilege="false">
+        <desc>續約記錄查詢</desc>
+        <url>distributor/query.do?method=toRenewalLogQuery</url>
+        <url>distributor/query.do?method=queryRenewalLogTable</url>
+    </privilege>
+
+    <privilege id="459" name="ADA卡郵寄資料查詢" dataPrivilege="false">
+        <desc>ADA卡郵寄資料查詢</desc>
+        <url>distributor/newAdaRePri.do?method=toBatchPrintedAndAddressForm</url>
+        <url>distributor/newAdaRePri.do?method=queryBatchPrintedAndAddressResult</url>
+        <url>distributor/newAdaRePri.do?method=printBatchPrintedAndAddress</url>
+    </privilege>
+
+    <privilege id="460" name="顧客/補卡發票查詢" dataPrivilege="false">
+        <desc>顧客/補卡發票查詢</desc>
+        <url>order/cumInvQuery.do?method=toQueryCumInv</url>
+        <url>order/cumInvQuery.do?method=queryCumInvs</url>
+        <url>order/cumInvQuery.do?method=findCumInvInfo</url>
+        <url>order/cumInvQuery.do?method=findRenewalInfo</url>
+        <url>order/cumInvQuery.do?method=batchPrintCumInv</url>
+    </privilege>
+
+    <privilege id="461" name="ADA卡重印" dataPrivilege="false">
+        <desc>ADA卡重印</desc>
+        <url>distributor/daily.do?method=toQueryDistributor</url>
+        <url>distributor/daily.do?method=doADAReprint</url>
+        <url>distributor/daily.do?method=getDistributorName</url>
+    </privilege>
+
+    <privilege id="462" name="ADA卡重印/補發" dataPrivilege="false">
+        <desc>ADA卡重印/補發</desc>
+        <url>distributor/newAdaRePri.do?method=toQueryNewAdaRePri</url>
+        <url>distributor/newAdaRePri.do?method=doNewAdaReprint</url>
+        <url>distributor/newAdaRePri.do?method=getDistributorName</url>
+        <url>distributor/newAdaRePri.do?method=getDistInfo</url>
+    </privilege>
+
+    <privilege id="463" name="訂貨密碼信封批次列印" dataPrivilege="false">
+        <desc>訂貨密碼信封批次列印</desc>
+        <url>distributor/orderPasswordPrint.do?method=toBatchPrintForm</url>
+        <url>distributor/orderPasswordPrint.do?method=queryBatchResult</url>
+        <url>distributor/orderPasswordPrint.do?method=printBatchResult</url>
+    </privilege>
+
+    <privilege id="470" name="作廢顧客發票" dataPrivilege="false">
+        <desc>作廢顧客發票</desc>
+        <url>order/cumInvQuery.do?method=cancelCumInv</url>
+        <url>order/cumInvQuery.do?method=toCumInvOrderPrint</url>
+    </privilege>
+    <privilege id="480" name="恢復顧客發票" dataPrivilege="false">
+        <desc>恢復顧客發票</desc>
+        <url>order/cumInvQuery.do?method=resumeCumInv</url>
+        <url>order/cumInvQuery.do?method=toCumInvOrderPrint</url>
+    </privilege>
+    <privilege id="490" name="重印顧客發票" dataPrivilege="false">
+        <desc>重印顧客發票</desc>
+        <url>order/cumInvQuery.do?method=replaceCumInv</url>
+        <url>order/cumInvQuery.do?method=toCumInvOrderPrint</url>
+    </privilege>
+
+    <privilege id="500" name="重印發票報表" dataPrivilege="false">
+        <desc>重印發票報表</desc>
+        <url>order/reprintOrderQuery.do?method=toReprintOrderQuery</url>
+        <url>order/reprintOrderQuery.do?method=queryReprintOrder</url>
+        <url>order/reprintOrderQuery.do?method=queryReprintOrderDetail</url>
+    </privilege>
+
+    <privilege id="510" name="修改到府維修訂單" dataPrivilege="false">
+        <desc>修改到府維修訂單</desc>
+        <url>order/REPOrder.do?method=toUpdateOrder</url>
+        <url>order/REPOrder.do?method=resetOrderInSession</url>
+        <url>order/REPOrder.do?method=findDistributor</url>
+        <url>order/REPOrder.do?method=findProduct</url>
+        <url>order/REPOrder.do?method=toPaperCoupon</url>
+        <url>order/REPOrder.do?method=choosePaperCoupon</url>
+        <url>order/REPOrder.do?method=toOrderDetail</url>
+        <url>order/REPOrder.do?method=prePromotion</url>
+        <url>order/REPOrder.do?method=toPromotion</url>
+        <url>order/REPOrder.do?method=prePay</url>
+        <url>order/REPOrder.do?method=toPay</url>
+        <url>order/REPOrder.do?method=toInstallAddress</url>
+        <url>order/REPOrder.do?method=findDist4InstallAdr</url>
+        <url>order/REPOrder.do?method=saveInstallAddress</url>
+        <url>order/REPOrder.do?method=toPrintNewVoucher</url>
+        <url>order/REPOrder.do?method=toProductCT</url>
+        <url>order/REPOrder.do?method=saveProductCT</url>
+        <url>payment2.do?method=toPayment</url>
+        <url>payment2.do?method=viewProducts</url>
+        <url>payment2.do?method=addPaymentType</url>
+        <url>payment2.do?method=checkBankCard</url>
+        <url>payment2.do?method=preConfirm</url>
+        <url>payment2.do?method=confirm</url>
+        <url>payment.do?method=confirmFalse</url>
+        <url>payment.do?method=pendingProduct</url>
+        <url>payment2.do?method=doPaymentAuth</url>
+        <url>payment2.do?method=toTicketResult</url>
+    </privilege>
+
+    <privilege id="600" name="退貨退款" dataPrivilege="false">
+        <desc>退  貨</desc>
+        <url>return/ReturnOrder.do?method=toReturnOrder1</url>
+        <url>return/ReturnOrder.do?method=toReturnOrder2</url>
+        <url>return/ReturnOrder.do?method=queryServices</url>
+        <url>return/ReturnOrder.do?method=editReturnHistory</url>
+        <url>return/ReturnOrder.do?method=toEditReturnHistory</url>
+        <url>return/ReturnOrder.do?method=addReturnHistory</url>
+        <url>return/ReturnOrder.do?method=checkReturnHistory</url>
+        <url>return/ReturnOrder.do?method=showReturnHistory</url>
+        <url>return/ReturnOrder.do?method=addServiceItem</url>
+        <url>return/ReturnOrder.do?method=saveReturnOrder</url>
+        <url>return/ReturnOrder.do?method=findDistInfo</url>
+        <url>return/ReturnOrder.do?method=findOrderByInvoice</url>
+        <url>return/ReturnOrder.do?method=toViewOrder</url>
+        <url>return/ReturnOrder.do?method=addReturnItem</url>
+        <url>return/ReturnOrder.do?method=queryDistAddr</url>
+        <url>return/ReturnOrder.do?method=checkBankAccount</url>
+        <url>return/ReturnOrder.do?method=checkInvoiceNum</url>
+        <url>return/ReturnOrder.do?method=checkStartKits</url>
+        <url>return/ReturnOrder.do?method=resetReturnBVPV</url>
+        <url>return/ReturnOrder.do?method=cleanSessionData</url>
+        <url>return/ReturnOrder.do?method=saveCheckHistory</url>
+        <url>return/ReturnOrder.do?method=checkTicketInfo</url>
+        <url>return/ReturnOrder.do?method=cancelTicketInfo</url>
+        <url>return/ReturnOrder.do?method=inputTicketInfo</url>
+        <url>return/ReturnOrder.do?method=toInputTicketInfo</url>
+        <url>order/orderQuery2.do?method=findOrderInfo</url>
+    </privilege>
+
+    <privilege id="610" name="退貨查詢" dataPrivilege="false">
+        <desc>退貨查詢</desc>
+        <url>return/ReturnOrder.do?method=toQueryReturnOrders</url>
+        <url>return/ReturnOrder.do?method=queryReturnOrders</url>
+        <url>return/ReturnOrder.do?method=findReturnOrder</url>
+        <url>return/ReturnOrder.do?method=rePrtReturnOrderInvoice</url>
+        <url>return/ReturnOrder.do?method=confirmReturnOrder</url>
+        <url>return/ReturnOrder.do?method=toQueryReturnHistory</url>
+        <url>return/ReturnOrder.do?method=queryReturnHistory</url>
+    </privilege>
+
+    <privilege id="620" name="退貨资料更新" dataPrivilege="false">
+        <desc>退貨顧客资料更新</desc>
+        <url>return/ReturnOrder.do?method=toModifyReturnHistory</url>
+        <url>return/ReturnOrder.do?method=modifyReturnHistory</url>
+        <url>return/ReturnOrder.do?method=delReturnHistory</url>
+    </privilege>
+
+    <privilege id="630" name="產品抵用券扣款查詢" dataPrivilege="false">
+        <desc>產品抵用券扣款查詢</desc>
+        <url>coupon.do?method=toQueryCoupons4SubTract</url>
+        <url>coupon.do?method=queryCoupons4SubTract</url>
+        <url>coupon.do?method=queryCoupon4SubTractDetail</url>
+        <url>coupon.do?method=toCouponSubTract </url>
+        <url>coupon.do?method=doCouponSubTract</url>
+    </privilege>
+
+    <privilege id="700" name="一般刪除直銷權" dataPrivilege="false">
+        <desc>一般刪除直銷權</desc>
+        <url>distributor/delete.do?method=toDeleteForm</url>
+        <url>distributor/delete.do?method=getDistInfo</url>
+        <url>distributor/delete.do?method=delete</url>
+    </privilege>
+
+    <privilege id="705" name="主任刪除直銷權" dataPrivilege="false">
+        <desc>主任刪除直銷權</desc>
+        <url>distributor/delete.do?method=toDirectorDeleteForm</url>
+        <url>distributor/delete.do?method=getDistInfo</url>
+        <url>distributor/delete.do?method=directorDelete</url>
+    </privilege>
+
+    <privilege id="800" name="移除變更推薦人/移除刪除直銷權/移除恢復直銷權" dataPrivilege="false">
+        <desc>移除變更推薦人/移除刪除直銷權/移除恢復直銷權</desc>
+        <url>distributor/remove.do?method=toRemoveQuery</url>
+        <url>distributor/remove.do?method=getDistInfo</url>
+        <url>distributor/remove.do?method=queryDistMove</url>
+        <url>distributor/remove.do?method=queryDistDelete</url>
+        <url>distributor/remove.do?method=queryDistReactivate</url>
+        <url>distributor/remove.do?method=findMoveBatches</url>
+        <url>distributor/remove.do?method=findDeleteBatches</url>
+        <url>distributor/remove.do?method=findReactivationBatches</url>
+        <url>distributor/remove.do?method=getMoveDistInfo</url>
+        <url>distributor/remove.do?method=getDeleteDistInfo</url>
+        <url>distributor/remove.do?method=getReactivateDistInfo</url>
+        <url>distributor/remove.do?method=removeDistMove</url>
+        <url>distributor/remove.do?method=removeDistDelete</url>
+        <url>distributor/remove.do?method=removeDistReactivate</url>
+    </privilege>
+
+    <privilege id="801" name="直銷商辦理退出" dataPrivilege="false">
+        <desc>直銷商辦理退出</desc>
+        <url>distributor/return.do?method=toReturnQuery</url>
+        <url>distributor/return.do?method=findDistInfos</url>
+        <url>distributor/return.do?method=toNoNumberDeleteForm</url>
+        <url>distributor/return.do?method=getDistInfo</url>
+        <url>distributor/return.do?method=starterKitReturn</url>
+        <url>distributor/return.do?method=getOrderDistInfo</url>
+    </privilege>
+
+
+    <privilege id="802" name="取消直銷商辦理退出" dataPrivilege="false">
+        <desc>取消直銷商辦理退出</desc>
+        <url>distributor/returnCancel.do?method=toReturnCancelQuery</url>
+        <url>distributor/returnCancel.do?method=findBatches</url>
+        <url>distributor/returnCancel.do?method=getDistInfo</url>
+        <url>distributor/returnCancel.do?method=returnCancel</url>
+    </privilege>
+
+
+    <privilege id="803" name="直銷商資料查詢" dataPrivilege="false">
+        <desc>取消直銷商辦理退出</desc>
+        <url>distributor/query.do?method=toDistInfosQuery</url>
+        <url>distributor/query.do?method=findDistInfos</url>
+        <url>distributor/query.do?method=getDistInfo</url>
+    </privilege>
+
+
+    <privilege id="804" name="退出報表列印" dataPrivilege="false">
+        <desc>退出報表列印</desc>
+        <url>distributor/returnDaily.do?method=toDailyForm</url>
+        <url>distributor/returnDaily.do?method=queryResultDetail</url>
+        <url>distributor/returnDaily.do?method=printResultDetail</url>
+        <url>distributor/returnDaily.do?method=queryDeleteResultDetail</url>
+
+    </privilege>
+
+    <privilege id="805" name="退貨報表打印" dataPrivilege="false">
+        <desc>退貨報表打印</desc>
+        <url>return/ReturnOrder.do?method=toDailyReport</url>
+        <url>return/ReturnOrder.do?method=dailyReport</url>
+        <url>return/ReturnOrder.do?method=dailyReportPrint</url>
+    </privilege>
+
+    <privilege id="806" name="現金代用券列印" dataPrivilege="false">
+        <desc>現金代用券列印</desc>
+        <url>return/voucherQuery.do?method=toDailyReport</url>
+        <url>return/voucherQuery.do?method=dailyReport</url>
+        <url>return/voucherQuery.do?method=dailyReportPrint</url>
+        <url>return/voucherQuery.do?method=getDistributorName</url>
+    </privilege>
+
+    <privilege id="807" name="續約/轉型發票作廢明細" dataPrivilege="false">
+        <desc>退出報表列印</desc>
+        <url>distributor/invoiceDaily.do?method=toDailyForm</url>
+        <url>distributor/invoiceDaily.do?method=queryResultDetail</url>
+    </privilege>
+
+    <privilege id="808" name="創始會員設定" dataPrivilege="false">
+        <desc>創始會員設定</desc>
+        <url>distributor/edit.do?method=toOriginalPCEditForm</url>
+        <url>distributor/edit.do?method=getOriginalPCEditDistInfo</url>
+        <url>distributor/edit.do?method=originalPCEdit</url>
+    </privilege>
+
+    <privilege id="809" name="訂貨密碼手動發送" dataPrivilege="false">
+        <desc>訂貨密碼手動發送</desc>
+        <url>distributor/edit.do?method=toOrderPasswordEditForm</url>
+        <url>distributor/edit.do?method=getOrderPasswordEditDistInfo</url>
+        <url>distributor/edit.do?method=orderPasswordEdit</url>
+    </privilege>
+
+    <privilege id="810" name="重印余额代用券報表" dataPrivilege="false">
+        <desc>重印余额代用券報表</desc>
+        <url>return/voucherQuery.do?method=toOrderVoucherReport</url>
+        <url>return/voucherQuery.do?method=orderReport</url>
+        <url>return/voucherQuery.do?method=orderReportPrint</url>
+        <url>return/voucherQuery.do?method=getDistributorName</url>
+    </privilege>
+
+
+    <!-- Jacky Chen ISR1018 -->
+    <privilege id="812" name="電子商務日結" dataPrivilege="false">
+        <desc>電子商務日結</desc>
+        <url>report.do?method=toReportMenu</url>
+        <!--<url>report.do?method=sendReport</url>-->
+        <url>report.do?method=sendReportByDaily</url>
+        <url>reportDownList.do?method=selectEbusinessReportList</url>
+    </privilege>
+
+    <privilege id="811" name="帶檔續約同意設定" dataPrivilege="false">
+        <desc>帶檔續約同意設定</desc>
+        <url>distributor/edit.do?method=toCreditCardStatusEditForm</url>
+        <url>distributor/edit.do?method=getCreditCardStatusEditDistInfo</url>
+        <url>distributor/edit.do?method=creditCardStatusEdit</url>
+        <url>distributor/edit.do?method=addCardForAutoRenew</url>
+        <url>distributor/edit.do?method=getAgentDistInfo</url>
+        <url>distributor/edit.do?method=deleteCreditCard</url>
+    </privilege>
+
+    <privilege id="813" name="票券報表" dataPrivilege="false">
+        <desc>票券報表</desc>
+        <url>report.do?method=toTicketReportMenu</url>
+        <!--<url>ticketReport.do?method=sendReport</url>-->
+        <url>ticketReport.do?method=sendReportByTicket</url>
+        <url>reportDownList.do?method=selectTicketReportList</url>
+    </privilege>
+
+    <privilege id="814" name="加入續約日結報表" dataPrivilege="false">
+        <desc>加入續約日結報表</desc>
+        <url>report.do?method=toAppOrderDailyReportMenu</url>
+        <url>appOrderDailyReport.do?method=sendReportByAppOrderDaily</url>
+        <url>reportDownList.do?method=selectAppOrderDailyReportList</url>
+    </privilege>
+
+    <privilege id="900" name="代用券遺失/補發" dataPrivilege="false">
+        <desc>代用券遺失/補發</desc>
+        <url>return/voucherQuery.do?method=toQueryVouchers</url>
+        <url>return/voucherQuery.do?method=queryVouchers</url>
+        <url>return/voucherQuery.do?method=replaceVoucher</url>
+        <url>return/voucherQuery.do?method=reissueVoucher</url>
+    </privilege>
+
+    <!-- 消费点数兑换 -->
+    <privilege id="1000" name="紅利積點兌換 - 查詢" dataPrivilege="false">
+        <desc>紅利積點兌換 - 查詢</desc>
+        <url>point.do?method=toPointQueue1</url>
+        <url>point.do?method=queryPoints</url>
+        <url>point.do?method=queryPointQueueDetail</url>
+        <url>point.do?method=addPointQueue</url>
+        <url>point.do?method=toAddPointQueue</url>
+        <url>order/orderQuery2.do?method=findOrderInfo</url>
+        <url>return/ReturnOrder.do?method=findReturnOrder</url>
+    </privilege>
+
+    <privilege id="1001" name="批量增加點數（臨時）" dataPrivilege="false">
+        <desc>批量增加點數（臨時）</desc>
+        <url>point.do?method=doAddPointBatch</url>
+        <url>point.do?method=toAddPointBatch</url>
+    </privilege>
+
+    <privilege id="1002" name="聯名卡註冊卡號查詢" dataPrivilege="false">
+        <desc>聯名卡註冊卡號查詢</desc>
+        <url>order/queryAccount.do?method=queryDistAccount</url>
+    </privilege>
+
+    <privilege id="1003" name="聯名卡註冊卡號刪除" dataPrivilege="false">
+        <desc>聯名卡註冊卡號刪除</desc>
+        <url>order/queryAccount.do?method=delOneDistAccount</url>
+    </privilege>
+
+    <!-- 消费点数兑换 -->
+    <privilege id="1100" name="產品抵用券 - 查詢" dataPrivilege="false">
+        <desc>產品抵用券 - 查詢</desc>
+        <url>coupon.do?method=queryCoupons</url>
+        <url>coupon.do?method=queryCouponDetail</url>
+        <url>coupon.do?method=toAddCoupon</url>
+        <url>coupon.do?method=addCoupon</url>
+    </privilege>
+
+    <!-- 訂單密碼發送記錄查詢 -->
+    <privilege id="1200" name="訂貨密碼發送記錄查詢" dataPrivilege="false">
+        <desc>訂貨密碼發送記錄查詢</desc>
+        <url>distributor/orderPasswordReport.do?method=toPasswordLogForm</url>
+        <url>distributor/orderPasswordReport.do?method=queryPasswordLogResult</url>
+    </privilege>
+
+    <privilege id="1210" name="訂貨密碼日結" dataPrivilege="false">
+        <desc>訂貨密碼日結</desc>
+        <url>distributor/orderPasswordReport.do?method=toDailyForm</url>
+        <url>distributor/orderPasswordReport.do?method=queryDailyResult</url>
+        <url>distributor/orderPasswordReport.do?method=printDailyResult</url>
+    </privilege>
+
+    <privilege id="1220" name="訂貨密碼月結" dataPrivilege="false">
+        <desc>訂貨密碼月結</desc>
+        <url>distributor/orderPasswordReport.do?method=toMonthlyForm</url>
+        <url>distributor/orderPasswordReport.do?method=queryMonthlyResult</url>
+        <url>distributor/orderPasswordReport.do?method=printMonthlyResult</url>
+    </privilege>
+
+
+
+    <privilege id="1300" name="線上授權日結" dataPrivilege="false">
+        <desc>線上授權日結</desc>
+        <url>payment/daily.do?method=toPaymentAuthDailyForm</url>
+        <url>payment/daily.do?method=queryPaymentAuthResult</url>
+    </privilege>
+
+    <!-- 消费点数兑换结束 -->
+
+    <!-- 訂單服務結束 -->
+
+    <!-- 主任授權開始 -->
+    <!--
+    使用说明：@author  @date
+
+    1.加权限 id/XXXXX部分要修改
+    在/CONFIG/PrivilegeConfig-file/privilege.xml增加以下内容：
+    <privilege id="905" name="主任授權 - XXXXX" dataPrivilege="false">
+        <desc>主任授權 - XXXXX</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+
+    2.加常量 *及值要修改
+    /TWPOS_JAVA/com/amway/twpos/util/Constansts.java
+    //授权Action Code
+    public static final String ATHAUD_ACTION_CODE_*  = "1";
+    //授权Function Code
+    public static final String ATHAUD_FUNCTION_CODE_*  = "XXXXX";
+
+    3.权限关连 *及value部分要修改
+    /TWPOS_JAVA/com/amway/twpos/privilege/bo/PrivilegeBO.java
+    validSuperMap.put(Constansts.ATHAUD_FUNCTION_CODE_*,"905");//905是在privilege.xml中定义
+    validSuperFuncActionMap.put(Constansts.ATHAUD_FUNCTION_CODE_*,Constansts.ATHAUD_ACTION_CODE_*);
+
+    4.页面调用
+    参考页面：/TWPOS_WEB/WebContent/tiles/common/PosLogin.jsp
+    function validSuper(){}// 弹出主任授权窗口，输入后，向后台发送授权请求
+    function validSuperCallback(){}// 授权确认处理
+     -->
+    <privilege id="901" name="主任授權 - 付款時現金代用券扣減的BV、PV > 訂單產生的BV、PV" dataPrivilege="false">
+        <desc>主任授權 - 付款時現金代用券扣減的BV、PV > 訂單產生的BV、PV</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="902" name="主任授權 - 非當日POS登入" dataPrivilege="false">
+        <desc>主任授權 - 非當日POS登入</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="903" name="主任授權 - 重印發票" dataPrivilege="false">
+        <desc>主任授權 - 重印發票</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="904" name="主任授權 - 作廢訂單" dataPrivilege="false">
+        <desc>主任授權 - 作廢訂單</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="905" name="主任授權 - 延伸續約" dataPrivilege="false">
+        <desc>主任授權 - 延伸續約</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="906" name="主任授權 - 證號檢查" dataPrivilege="false">
+        <desc>主任授權 - 證號檢查</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="907" name="主任授權 - 重印顧客發票" dataPrivilege="false">
+        <desc>主任授權 - 重印顧客發票</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="908" name="主任授權 - 有業績存在的刪除" dataPrivilege="false">
+        <desc>主任授權 - 有業績存在的刪除</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="909" name="主任授權 - 到期日受限的取消續約" dataPrivilege="false">
+        <desc>主任授權 - 到期日受限的取消續約</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="910" name="主任授權 - 付款方式受上月限制的取消續約" dataPrivilege="false">
+        <desc>主任授權 - 付款方式受上月限制的取消續約</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="911" name="主任授權 - 付款方式受本月限制的取消續約" dataPrivilege="false">
+        <desc>主任授權 - 付款方式受本月限制的取消續約</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="912" name="主任授權 - 已有訂貨的取消續約" dataPrivilege="false">
+        <desc>主任授權 - 已有訂貨的取消續約</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="913" name="主任授權 - 隔日重印現金代用券" dataPrivilege="false">
+        <desc>主任授權 - 隔日重印現金代用券</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <privilege id="914" name="主任授權 - 隔日取消退出" dataPrivilege="false">
+        <desc>主任授權 - 隔日取消退出</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="915" name="主任授權 - 隔日重印退貨發票" dataPrivilege="false">
+        <desc>主任授權 - 隔日重印退貨發票</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="916" name="主任授權 - 重印新版ADA卡" dataPrivilege="false">
+        <desc>主任授權 - 重印新版ADA卡</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="917" name="主任授權 - 隔日作廢退貨" dataPrivilege="false">
+        <desc>主任授權 - 隔日作廢退貨</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="918" name="主任授權 - 創始會員設定" dataPrivilege="false">
+        <desc>主任授權 - 創始會員設定</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="919" name="主任授權 - 跨月重印" dataPrivilege="false">
+        <desc>主任授權 - 跨月重印</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+
+    <privilege id="920" name="主任授權 - 無效直銷商取消續約" dataPrivilege="false">
+        <desc>主任授權 - 無效直銷商取消續約</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="921" name="主任授權 - 重印餘額代用券" dataPrivilege="false">
+        <desc>主任授權 - 重印餘額代用券</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+
+    <privilege id="922" name="主任授權 - 延申續約時，同一ID，已經有新的有效直銷商" dataPrivilege="false">
+        <desc>主任授權 - 延申續約時，同一ID，已經有新的有效直銷商</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <!-- 主任授權結束 -->
+
+    <privilege id="923" name="中心主任授權 - 強制使用現金代用券" dataPrivilege="false">
+        <desc>中心主任授權 - 強制使用現金代用券</desc>
+        <url>login.do?method=validDirector</url>
+    </privilege>
+    <privilege id="924" name="中心主任授權 - 銀獎章轉型會員" dataPrivilege="false">
+        <desc>中心主任授權 - 銀獎章轉型會員</desc>
+        <url>login.do?method=validDirector</url>
+    </privilege>
+    <!-- 新主任授權結束 -->
+    <privilege id="925" name="主任授權 - 門票預印" dataPrivilege="false">
+        <desc>主任授權 - 門票預印</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <!-- 主任授權 - 門票重印 add by GaryChen in 20120911 -->
+    <privilege id="926" name="主任授權 - 門票重印" dataPrivilege="false">
+        <desc>主任授權 - 門票重印</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+    <!-- 主任授權 - 國際推薦人 -->
+    <privilege id="927" name="主任授權 - 國際推薦人" dataPrivilege="false">
+        <desc>主任授權 - 門票重印</desc>
+        <url>login.do?method=validSuper</url>
+    </privilege>
+</privileges>
