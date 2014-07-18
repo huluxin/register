@@ -4,10 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
     <title>E: disabled伪类选择器与E:enabled伪类选择器结合使用示例</title>
     <script>
-
+          function radio_onchange(){
+              var radio = document.getElementById("radio1");
+              var text = document.getElementById("text1");
+              if(radio.checked)
+                text.disabled = "";
+              else{
+                  text.value = "";
+                  text.disabled = "disabled";
+              }
+          }
     </script>
     <style>
-
+        input[type="text"]:enabled{
+            background-color: yellow;
+        }
+        input[type="text"]:disabled{
+            background-color: purple;
+        }
     </style>
 </head>
 <body>
