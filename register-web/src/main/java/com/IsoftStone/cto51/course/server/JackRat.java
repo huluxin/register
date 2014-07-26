@@ -3,6 +3,8 @@ package com.IsoftStone.cto51.course.server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * 51CTO Java 视频教程  用JAVA创建高端大气上档次的山寨WEB服务器tomMonkey
@@ -35,6 +37,10 @@ public class JackRat {
             while (true) {
                 Socket socket = ss.accept();
                 System.out.println("-----------有客户端请求------------");
+                //创建一个线程池
+                ExecutorService pool = Executors.newFixedThreadPool(100);
+                //将任务提交给线程池去处理
+                pool.submit(new HandlerRequestThread(socket));
             }
         } catch (IOException e) {
             e.printStackTrace();

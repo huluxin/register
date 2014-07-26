@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Services {
     private Services(){}
 
-    private static final Map<String,Provider> providers = new ConcurrentHashMap<String,Provider>() ;
+   /* private static final Map<String,Provider> providers = new ConcurrentHashMap<String,Provider>() ;
     public static final String DEFAULT_PROVIDER_NAME = "<def>";
 
     public static void registerDefaultProvider(Provider p){
@@ -28,5 +28,5 @@ public class Services {
         if(p == null)
             throw new IllegalArgumentException("No provider " + name);
         return p.newService();
-    }
+    }*/
 }
