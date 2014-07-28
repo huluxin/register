@@ -28,7 +28,7 @@ public class ColorPoint extends Point {
             return o.equals(this);
         }
         return super.equals(o) && ((ColorPoint) o).color == color;
-    }
+}
 
     public static void main(String[] args) {
 //        Point p = new Point(1, 2);
