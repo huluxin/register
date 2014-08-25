@@ -1,0 +1,10 @@
+1、int 转换成char:
+                int  n = 1;
+                char ch = （char）(n + '0');
+                这样打印出来ch的值为1;
+                不过需要注意(因为char只有一个字节)，此处的n只能是0-9之间的字符
+
+2、char转换成Int:
+                char ch = '9';
+                int n = int(ch) - int('0');
+                此处ch也是‘0’至‘9’的数字字符
