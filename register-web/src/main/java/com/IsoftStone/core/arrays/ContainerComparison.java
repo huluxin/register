@@ -9,7 +9,7 @@ import static com.IsoftStone.core.net.mindview.util.Print.print;
 /**
  * Created by Ivan Wang on 2014/8/26.
  */
-class BeryliumSpace {
+class BerylliumSphere {
     private static long counter;
     private final long id = counter++;
 
@@ -21,16 +21,16 @@ class BeryliumSpace {
 
 public class ContainerComparison {
     public static void main(String[] args) {
-        BeryliumSpace[] spheres = new BeryliumSpace[10];
+        BerylliumSphere[] spheres = new BerylliumSphere[10];
         for (int i = 0; i < 5; i++) {
-            spheres[i] = new BeryliumSpace();
+            spheres[i] = new BerylliumSphere();
         }
         print(Arrays.toString(spheres));
         print(spheres[4]);
 
-        List<BeryliumSpace> sphereList = new ArrayList<BeryliumSpace>();
+        List<BerylliumSphere> sphereList = new ArrayList<BerylliumSphere>();
         for (int i = 0; i < 5; i++) {
-            sphereList.add(new BeryliumSpace());
+            sphereList.add(new BerylliumSphere());
         }
         print(sphereList);
         print(sphereList.get(4));

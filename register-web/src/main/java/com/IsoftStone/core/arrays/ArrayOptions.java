@@ -11,17 +11,17 @@ import static com.IsoftStone.core.net.mindview.util.Print.print;
 public class ArrayOptions {
     public static void main(String[] args) {
         // Arrays of objects:
-        BeryliumSpace[] a;  // Local uninitialized variable
-        BeryliumSpace[] b = new BeryliumSpace[5];
+        BerylliumSphere[] a;  // Local uninitialized variable
+        BerylliumSphere[] b = new BerylliumSphere[5];
         print("b: " + Arrays.toString(b));
 
-        BeryliumSpace[] c = new BeryliumSpace[4];
+        BerylliumSphere[] c = new BerylliumSphere[4];
         for (int i = 0; i < c.length; i++) {
             if (c[i] == null)    // Can test for null reference
-                c[i] = new BeryliumSpace();
+                c[i] = new BerylliumSphere();
         }
-        BeryliumSpace[] d = {new BeryliumSpace(), new BeryliumSpace(), new BeryliumSpace()};
-        a = new BeryliumSpace[]{new BeryliumSpace(), new BeryliumSpace()};
+        BerylliumSphere[] d = {new BerylliumSphere(), new BerylliumSphere(), new BerylliumSphere()};
+        a = new BerylliumSphere[]{new BerylliumSphere(), new BerylliumSphere()};
 
         // (Trailing comma is optional in both cases)
         print("a.length = " + a.length);
