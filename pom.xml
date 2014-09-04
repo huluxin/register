@@ -15,9 +15,10 @@
         <module>register-persist</module>
         <module>register-web</module>
         <module>register-service</module>
+        <module>register-spring</module>
     </modules>
     <properties>
-        <!--<springframework.version>2.5.6</springframework.version>-->
+        <!--<springframework.version>2.5.6</springframework.version> 4.0.5.RELEASE-->
         <springframework.version>3.0.5.RELEASE</springframework.version>
         <junit.version>4.7</junit.version>
         <!-- JDBC Drivers -->
