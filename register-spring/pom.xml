@@ -11,6 +11,11 @@
 
     <artifactId>register-spring</artifactId>
 
+    <properties>
+        <dom4j.version>1.6.1</dom4j.version>
+        <commons-dbcp.version>1.4</commons-dbcp.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -31,6 +36,15 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${commons-dbcp.version}</version>
         </dependency>
     </dependencies>
 </project>
