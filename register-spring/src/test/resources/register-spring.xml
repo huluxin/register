@@ -15,23 +15,15 @@
     <!-- 扫描类包，将标注Spring 注解的类自动转换bean，同时完成Bean 的注入-->
      <context:component-scan base-package="com.IsoftStone.baobaotao.dao"/>
     <!-- 扫描service类包，应用Spring的注解配置-->
-    <context:component-scan base-package="com.IsoftStone.baobaotao.service"/>
+     <context:component-scan base-package="com.IsoftStone.baobaotao.service"/>
 
-    <!-- 配置数据源 -->
-   <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    <!--定义一个使用DBCP实现的数据源-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close"
           p:driverClassName="com.mysql.jdbc.Driver"
-          p:url="jdbc:mysql://127.0.0.1:3306/sampledb"
+          p:url="jdbc:mysql://localhost:3309/sampledb"
           p:username="root"
-          p:password="admin" />-->
-
-    <!--本示例采用DBCP数据源,连接池配置如下-->
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost/sampledb"/>
-        <property name="username" value="root"/>
-        <property name="password" value="admin"/>
-    </bean>
+          p:password="admin"/>
 
     <!--定义jdbc 的模板-->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
@@ -40,7 +32,6 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
           p:dataSource-ref="dataSource"/>
     <!-- 通过AOP配置提供事务增强，让service 包下所有Bean的所有方法拥有事务 -->
-    <!-- 通过AOP配置提供事务增强，让service包下所有Bean的所有方法拥有事务 -->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="serviceMethod"
                       expression=" execution(* com.IsoftStone.baobaotao.service..*(..))" />
@@ -48,7 +39,7 @@
     </aop:config>
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            <tx:method name="*" />
+            <tx:method name="*"/>
         </tx:attributes>
     </tx:advice>
 </beans>
