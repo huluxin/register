@@ -25,13 +25,13 @@
         <servlet-class>com.IsoftStone.register.web.SignUpServlet</servlet-class>
     </servlet>
     <servlet>
-         <servlet-name>ActivateServlet</servlet-name>
-         <servlet-class>com.IsoftStone.register.web.ActivateServlet</servlet-class>
-     </servlet>
-       <servlet>
-    <servlet-name>LoginServlet</servlet-name>
-      <servlet-class>com.IsoftStone.register.web.LoginServlet</servlet-class>
-  </servlet>
+        <servlet-name>ActivateServlet</servlet-name>
+        <servlet-class>com.IsoftStone.register.web.ActivateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.IsoftStone.register.web.LoginServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CaptchaImageServlet</servlet-name>
         <url-pattern>/captcha_image</url-pattern>
@@ -40,10 +40,10 @@
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
-         <servlet-name>ActivateServlet</servlet-name>
-         <url-pattern>/activate</url-pattern>
-     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActivateServlet</servlet-name>
+        <url-pattern>/activate</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>

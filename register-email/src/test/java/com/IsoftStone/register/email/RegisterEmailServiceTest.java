@@ -47,7 +47,7 @@ public class RegisterEmailServiceTest {
     @After
     public void stopMailServer()
             throws Exception
-    {
-      //  greenMail.stop();
-    }
-}
+{
+        //  greenMail.stop();
+        }
+        }

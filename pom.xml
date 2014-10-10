@@ -59,6 +59,7 @@
                 <artifactId>spring-jdbc</artifactId>
                 <version>${springframework.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
